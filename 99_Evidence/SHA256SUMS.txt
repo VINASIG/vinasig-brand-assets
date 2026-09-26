@@ -1,0 +1,49 @@
+7c12e83030566760ecce9adb97700aac6dc6dc29213d70c098ace324e21069a2  01_Logos/Contained Mark/Exports/VINASIG Contained Brand Mark - 20x - 540x540.png
+6ffeeaf003b75e8d86d3ffe5a0fe8114ac32bd7e1f170640fb5153eea40cc2d7  01_Logos/Contained Mark/Exports/VINASIG Contained Brand Mark - 27x27.svg
+e4d5fb51711544893603e587293b38e5690af45d7a4944ea4f5d3372ccbde518  01_Logos/Contained Mark/Exports/VINASIG Contained Brand Mark - 2x - 54x54.png
+11e42fc3acdff997c089a8d42eb3d7b25df4e5a867cb2fcd8a25e08d163f570d  01_Logos/Contained Mark/Exports/VINASIG Contained Brand Mark - 40x - 1080x1080.png
+f5d24754feed9c510491be3a36774eb1fcc138ddb0bc4fca63d26de5b2e9702f  01_Logos/Contained Mark/Exports/VINASIG Contained Brand Mark - 4x - 108x108.png
+daaaa146764778bafaae239398c763c755ba5aa12608b975bea0c046191a5068  01_Logos/Contained Mark/Exports/VINASIG Contained Brand Mark - 8x - 216x216.png
+2de8e9b14277d831ec24765dbd3c98333b27215dd20df8ada8c16a89ddb14814  01_Logos/Contained Mark/Exports/VINASIG Contained Brand Mark - Master - 27x27.png
+e3bf47d80ce6680177b8db0d69fc84eaf12d728e4260ddd8011d33a7c0d7e71c  01_Logos/Contained Mark/Source/VINASIG Contained Brand Mark - 27x27.af
+298ef630537e98b8327bfde92d64a8188091478dedc1a43cd992628f3596588b  01_Logos/Contained Mark/Source/VINASIG Contained Brand Mark - 27x27.aseprite
+4f14f69fb21b73653b311adbc1707241c61624171ec6d129fcd283d53c091566  01_Logos/Favicon/Exports/VINASIG Favicon - 16x16.png
+24603abb66b4cd900b997caffb369266cc27495ebe3a3bce7af28181e18a064a  01_Logos/Favicon/Exports/VINASIG Favicon - 32x32.png
+6feec540e3e91f5216feb8766fc851e17e7a41991f4b90fa227d1558189d71f4  01_Logos/Favicon/Exports/VINASIG Favicon - 48x48.png
+1177e97568e9489f961cc30173a7762f4ab09bbf29b84f068cd35800b3e8ea71  01_Logos/Favicon/Source/VINASIG Favicon - 16x16.aseprite
+1949476a0723ddb5670049ac0c3cdd6476f2403ebf7a2843ee042d3b0d04bbd3  01_Logos/Favicon/Source/VINASIG Favicon - 32x32.aseprite
+7fe355d7563f9e1636782f90a20e14d945e2dff53740e458a9e4ff727f677167  01_Logos/Horizontal Lockup/Exports/VINASIG Primary Horizontal Lockup - Color Black - 1080x280.png
+da578c4c61428a7496b3fbadf4a6355af6dadc229c1217210d68892c7f661fe0  01_Logos/Horizontal Lockup/Exports/VINASIG Primary Horizontal Lockup - Color Black.svg
+caf26768dc148acdb1d23b5bcf85bd08dd78fc078e3efb074708b411ca60857b  01_Logos/Horizontal Lockup/Exports/VINASIG Primary Horizontal Lockup - Monochrome Black - 1080x280.png
+65b6757c7063d4bd4d134b93d3c52adecf0781ea8783ced1f3c8fd8550fcbfcb  01_Logos/Horizontal Lockup/Exports/VINASIG Primary Horizontal Lockup - Monochrome Black.svg
+dff5b5c7b443143fe05f535752665b091d3796102bdc455be8f0a8c9fea43118  01_Logos/Horizontal Lockup/Exports/VINASIG Primary Horizontal Lockup - Monochrome White - 1080x280.png
+8373bad85286339093594a63d4a2072f1896ee190b1edc8dd1132ec8c459668a  01_Logos/Horizontal Lockup/Exports/VINASIG Primary Horizontal Lockup - Monochrome White.svg
+e6839ebb86247e9805cb78737c27dff216f29a88b62ed29be0b7cd86c43e3cad  01_Logos/Horizontal Lockup/Exports/VINASIG Primary Horizontal Lockup - Primary Color - 1080x280.png
+747658f8c9ad3e93207ac90ca0a582cb57d33fb8770f5c02bb9e6b87fc28fe12  01_Logos/Horizontal Lockup/Exports/VINASIG Primary Horizontal Lockup - Primary Color - 540x140.png
+1a6570886ceb3ce742ebe5afe61eb48798189b15ec4ec72d687dd8c63a32ee59  01_Logos/Horizontal Lockup/Exports/VINASIG Primary Horizontal Lockup - Primary Color.svg
+2c7196e034929e10b22789d0966d712aeb1e2bc66121f0cedf642041f45fe2ae  01_Logos/Horizontal Lockup/Exports/VINASIG Primary Horizontal Lockup - Reversed - 1080x280.png
+98ceaaace06835138856d3710b4fed38714528573f78b19e710db796aea53d07  01_Logos/Horizontal Lockup/Exports/VINASIG Primary Horizontal Lockup - Reversed.svg
+20cbd0ffcfcf0279d6e44d19cf4e164d8c541555d0dc62c017ae536663e07b3a  01_Logos/Horizontal Lockup/Source/VINASIG Primary Horizontal Lockup - Variants.af
+14aae05aa528fcdc22336b115b5c4f91b5fe7b7e16bd01ea04e477b6e7bd2b2d  01_Logos/Monochrome/Exports/VINASIG Primary Brand Mark - Monochrome Black.png
+c8b72038554fc28a31f718bf38b19444364f004d2e9e733fb4d317abd621124e  01_Logos/Monochrome/Exports/VINASIG Primary Brand Mark - Monochrome White.png
+d21e0b15b77e5c449a848099a116cd04ec6ad7917ed34caf9b04469b039414f0  01_Logos/Monochrome/Source/VINASIG Primary Brand Mark - Monochrome Black.aseprite
+cbedeec9bfa8ebf2a40b8f6ab378e171ab801fb56d45325a9510a643fe7e527f  01_Logos/Monochrome/Source/VINASIG Primary Brand Mark - Monochrome White.aseprite
+4b4e702adb3a0f96ccb3396e3aef458a4c57cbd78f1d0d1894d92a7eb97e4eba  01_Logos/Primary Mark/Exports/VINASIG Primary Brand Mark - 20x - 500x500.png
+cdb10d7d6da713cec3d1909f25fa70744613a02b7da1a038ae4c8a58b8c62fb8  01_Logos/Primary Mark/Exports/VINASIG Primary Brand Mark - 25x25.svg
+085b91efb91c6e8b642c2178f885287d018c75a0b560890362c3714c9d7da5dd  01_Logos/Primary Mark/Exports/VINASIG Primary Brand Mark - 2x - 50x50.png
+e534b8f89bec7e407578a0d0d7998656c08e5112b161ecd670f2fc7facc9bf70  01_Logos/Primary Mark/Exports/VINASIG Primary Brand Mark - 40x - 1000x1000.png
+e65cd0ae92f88b9b74b5702301d5746aa02e5be9aa63fb682df61e32b0abe27a  01_Logos/Primary Mark/Exports/VINASIG Primary Brand Mark - 4x - 100x100.png
+2015594f02906b37b7ac7dfb40810b9cfeaee8e1cd640c3be42a9617dcde9702  01_Logos/Primary Mark/Exports/VINASIG Primary Brand Mark - 8x - 200x200.png
+89a9a53f193991346b4f962aad35435c9a931152892f7000d0e17ac50f9348b5  01_Logos/Primary Mark/Exports/VINASIG Primary Brand Mark - Master - 25x25.png
+dbea58fc29b142c2a6c4d91a6356bab93890936f806fa1fa442a13f91a4760a7  01_Logos/Primary Mark/Source/VINASIG Primary Brand Mark - 25x25.af
+3b297dbcea0c156b956c331f79ab73916ab90c392cdb9477c75b1c7282011cae  01_Logos/Primary Mark/Source/VINASIG Primary Brand Mark - 25x25.aseprite
+37c4fa4cf80c3a2dd86e79c1c51e6f0ad27dc001f4b5e9e14425fc9dde55d1f9  01_Logos/Source Canvases/VINASIG Logo System Canvas - 256x256 - Eliminated.aseprite
+c659bfe7091fd5f18d0f0e2b4f77c7f081ddcdc15c751a87fc446404f30c7bbc  01_Logos/Source Canvases/VINASIG Logo System Canvas - 256x256.aseprite
+8fb63865c6afd083723dc1775548306b7751f20397bebcb79646032c598c81b9  02_Typography/Space Grotesk/fonts/static/SpaceGrotesk-Bold.ttf
+4ea1b1687f9c1994228e842ef35941c72f125e97da80dacdcbecd9184d0ae185  02_Typography/Space Grotesk/fonts/static/SpaceGrotesk-Light.ttf
+d8135bce6603398f3d0cdb478a018d7fa869b0168d037a9408cad23e030bfa7a  02_Typography/Space Grotesk/fonts/static/SpaceGrotesk-Medium.ttf
+637578d47b0e70e02b3eb5056847dd9add17bd683234d28f5d11a6cf66ff2725  02_Typography/Space Grotesk/fonts/static/SpaceGrotesk-Regular.ttf
+279a5d22b8ab377f41706af566610667db3941b069b50187b98af09ca3b08f91  02_Typography/Space Grotesk/fonts/static/SpaceGrotesk-SemiBold.ttf
+697a7905c71f7c61d071648bc73449541796af865b51c86a672795f3b452b142  02_Typography/Space Grotesk/fonts/variable/SpaceGrotesk-VariableFont_wght.ttf
+d6227adcf031a9899e0f4fd017cfa4d9c88a1e223a4f08a64af10979802c06b9  02_Typography/Space Grotesk/OFL.txt
+22cb8432eef45e4caf172cb778c2d5214c9ad7ab495a435d34f9fc4d757fbf9d  VINASIG_Logo_Story.md
