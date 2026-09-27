@@ -18,11 +18,3 @@ The Git history and v1.0 release preserve this uploaded version. They provide an
 ## Logo rights
 
 This repository does not grant a license to use, reproduce, modify, or redistribute the VINASIG logo artwork. There is intentionally no root LICENSE file for the logo. See ASSET_RIGHTS.md for the distinction between logo assets and the third-party font.
-
----
-
-# Hệ thống logo VINASIG
-
-Kho lưu trữ riêng tư cho VINASIG Logo System, phiên bản 1.0. Hồ sơ sáng tạo ghi ngày bắt đầu thiết kế là 26 September 2026 và mô tả logo pixel art được thiết kế thủ công, sau đó phát triển thành hệ thống nhận diện.
-
-Mã nguồn, các bản xuất và bằng chứng tác quyền được sắp theo cấu trúc thư mục ở trên. Repo không cấp license sử dụng logo; file OFL.txt chỉ áp dụng cho font Space Grotesk.
