@@ -8,7 +8,7 @@ The mark contains four distinct agents arranged around a shared center. Each age
 
 > **Observe - Reason - Act - Evaluate**
 
-The logo is not designed as a literal illustration of artificial intelligence. It avoids common symbols such as robots, brains, circuits, or chips.
+The logo is not designed as a literal illustration of Super Intelligence (SI). It avoids common symbols such as robots, brains, circuits, or chips.
 
 Instead, the identity uses a modular pixel structure to represent software, systems, agents, and coordinated execution.
 
