@@ -1,0 +1,46 @@
+name: Archive checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: archive-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Checks (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npx --yes npm@12.2.0 ci --ignore-scripts
+      - run: npx --yes npm@12.2.0 run check
+      - run: npx --yes npm@12.2.0 test
+      - name: Verify the PowerShell entrypoint
+        shell: pwsh
+        run: ./99_Evidence/GENERATE_SHA256.ps1
+      - name: Keep integrity reports
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: archive-checks-${{ matrix.os }}-${{ github.sha }}
+          path: output/checks/
+          if-no-files-found: ignore
+          retention-days: 14

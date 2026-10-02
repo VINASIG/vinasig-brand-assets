@@ -1,0 +1,7 @@
+node_modules/
+output/
+.vinasig/backups/
+.vinasig/install.lock
+*.tsbuildinfo
+Thumbs.db
+.DS_Store

@@ -1,1 +1,23 @@
 * -text
+
+# Original artwork, notices, story and evidence keep their verbatim bytes.
+# Only new managed/owner files and the intentionally updated entrypoints use LF.
+AGENTS.md text eol=lf
+README.md text eol=lf
+CONTRIBUTING.md text eol=lf
+SECURITY.md text eol=lf
+CHANGELOG.md text eol=lf
+/*.json text eol=lf
+/*.mjs text eol=lf
+.node-version text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+.prettierignore text eol=lf
+.github/** text eol=lf
+.agents/** text eol=lf
+.vinasig/** text eol=lf
+docs/** text eol=lf
+scripts/** text eol=lf
+tests/** text eol=lf
+99_Evidence/README.md text eol=lf
+99_Evidence/GENERATE_SHA256.ps1 text eol=lf
