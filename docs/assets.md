@@ -4,20 +4,26 @@ Use this guide when selecting an existing asset for a VINASIG project. Read [the
 
 ## Logo variants
 
-| Variant                       | Intended context                                           | Files                                                           |
-| ----------------------------- | ---------------------------------------------------------- | --------------------------------------------------------------- |
-| Primary mark                  | Standalone color symbol.                                   | [SVG and PNG exports](<../01_Logos/Primary Mark/Exports>)       |
-| Contained mark                | Square avatar or tile with a white background and padding. | [SVG and PNG exports](<../01_Logos/Contained Mark/Exports>)     |
-| Primary horizontal lockup     | Light surface; color symbol and Core Graphite wordmark.    | [Horizontal exports](<../01_Logos/Horizontal Lockup/Exports>)   |
-| Color Black horizontal lockup | Light surface when the wordmark must be pure black.        | The Color Black SVG and PNG in the horizontal exports.          |
-| Reversed horizontal lockup    | Dark surface; color symbol and white wordmark.             | The Reversed SVG and PNG in the horizontal exports.             |
-| Monochrome horizontal lockup  | One-color applications.                                    | Black and white SVG and PNG versions in the horizontal exports. |
-| Monochrome symbol             | One-color standalone symbol.                               | [Black and white PNG exports](../01_Logos/Monochrome/Exports)   |
-| Favicon                       | Browser tab and small identity contexts.                   | [16, 32 and 48 px PNG exports](../01_Logos/Favicon/Exports)     |
+| Variant                       | Intended context                                            | Files                                                           |
+| ----------------------------- | ----------------------------------------------------------- | --------------------------------------------------------------- |
+| Primary mark                  | Standalone color symbol.                                    | [SVG and PNG exports](<../01_Logos/Primary Mark/Exports>)       |
+| Contained mark                | Square avatar or tile with a white background and padding.  | [SVG and PNG exports](<../01_Logos/Contained Mark/Exports>)     |
+| Primary horizontal lockup     | Color symbol and Core Graphite wordmark on a light surface. | [Horizontal exports](<../01_Logos/Horizontal Lockup/Exports>)   |
+| Color Black horizontal lockup | Light surface when the wordmark must be pure black.         | The Color Black SVG and PNG in the horizontal exports.          |
+| Reversed horizontal lockup    | Color symbol and white wordmark on a dark surface.          | The Reversed SVG and PNG in the horizontal exports.             |
+| Monochrome horizontal lockup  | One-color applications.                                     | Black and white SVG and PNG versions in the horizontal exports. |
+| Monochrome symbol             | One-color standalone symbol.                                | [Black and white PNG exports](../01_Logos/Monochrome/Exports)   |
+| Favicon                       | Browser tab and small identity contexts.                    | [16, 32 and 48 px PNG exports](../01_Logos/Favicon/Exports)     |
 
 Choose the existing variant that gives the intended contrast on the consumer's actual surface. Preserve aspect ratio and the mark's internal negative space. Keep the white shapes that belong to the artwork. Do not apply a gradient, redraw the geometry, reconstruct the wordmark with live text or substitute interface icons for the VINASIG mark.
 
 Use SVG when a scalable logo is needed. The horizontal SVG viewBox is 540 by 140 units. A filename mentioning a master grid does not define the SVG's intrinsic raster dimensions. A consumer controls the display size and should preserve the viewBox ratio.
+
+## Website header approved on 4 October 2026
+
+Use an unchanged transparent horizontal lockup directly on the header's actual surface. Light surfaces use Primary Color, Color Black or Monochrome Black. Dark surfaces use Reversed or Monochrome White. A light-only website keeps its light variant even when the system preference is dark. A consistently dark sidebar keeps its dark variant. Theme-aware headers select the matching original file in the initial document.
+
+Do not add a white panel, padded or rounded logo card, border frame, shadow, filter or cropped corners. Keep intentional white shapes inside the original artwork. Preserve the complete aspect ratio, accessible name and a link target of at least 44 by 44 CSS px. The target requirement does not specify a minimum artwork size or change any master export. The contained mark remains available for square avatar contexts. Record an owner-approved reason for an unavoidable header background exception.
 
 ## Raster sizes and archival filename corrections
 
