@@ -20,7 +20,7 @@ See [asset selection and integration](docs/assets.md) for monochrome variants, d
 
 ## Rights and notices
 
-Public access does not grant a license to the VINASIG artwork. The existing [asset rights notice](ASSET_RIGHTS.md) applies to the logo exports and editable sources. Space Grotesk is accompanied by its original SIL Open Font License 1.1; that notice applies to the font software. No general license or npm publication is added by this repository's tooling.
+The [asset rights notice](ASSET_RIGHTS.md) and [VINASIG Brand Usage Policy](BRAND_POLICY.md) apply to the logo exports and editable sources. They permit specified truthful references without opening the identity artwork under a software license. Space Grotesk retains its original SIL Open Font License 1.1. Local tooling uses GPL-3.0-or-later and authored documentation uses CC-BY-SA-4.0. This repository does not publish an npm package.
 
 ## Repository map
 
@@ -68,3 +68,9 @@ These records document the archive and its integrity. They do not establish an i
 - [Favicon Forge](https://github.com/VINASIG/favicon-forge) creates favicon packages for authorized assets.
 
 See [contributing](CONTRIBUTING.md) for archive changes and [security reporting](SECURITY.md) for sensitive findings.
+
+## License scopes
+
+VINASIG-authored software uses **GPL-3.0-or-later**. Authored documentation uses **CC-BY-SA-4.0**. Commercial use is allowed under those standard licenses. Fonts and third-party components retain their original terms. Official VINASIG identity assets follow the separate brand policy.
+
+Read [LICENSE](LICENSE), [LICENSES.md](LICENSES.md), [VINASIG Brand Usage Policy](BRAND_POLICY.md) and [the licensing review](docs/audits/licensing-2026-10-04.md) for exact scopes, rationale and remaining review.

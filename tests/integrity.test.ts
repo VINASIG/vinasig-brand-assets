@@ -85,7 +85,22 @@ await test("the current archive and core snapshot pass their integrity gates", a
     ),
   );
   const standards = await verifyStandards();
-  assert.equal(standards.files, 18);
+  assert.equal(standards.files, 27);
+  for (const file of [
+    "LICENSE",
+    "LICENSES.md",
+    "LICENSES/CC-BY-SA-4.0.txt",
+    "BRAND_POLICY.md",
+    "docs/audits/licensing-2026-10-04.md",
+    "docs/license-text-sources.json",
+    "policies/licensing.md",
+    "templates/check-licenses.mjs",
+    "templates/license-review.md",
+  ])
+    assert(
+      (await readFile(path.join(repositoryRoot, ".vinasig/standards", file)))
+        .length > 0,
+    );
   assert.equal(standards.runtimeDiscovery, "NOT_RUN");
 });
 

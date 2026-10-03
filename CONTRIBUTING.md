@@ -25,3 +25,7 @@ Exercise relevant negative cases when modifying an integrity gate. Do not overwr
 Before an authorized commit, inspect Git status and the staged diff, including binary paths. Push the current branch and verify the exact commit's CI. Changing visibility, tags, releases, asset rights or external accounts requires the user's task authorization. Keep changes focused and use concise English commit subjects.
 
 Report ordinary catalog or documentation defects in [repository issues](https://github.com/VINASIG/vinasig-brand-assets/issues). Use [the security policy](SECURITY.md) for sensitive findings.
+
+## Contribution licensing
+
+Read [LICENSES.md](LICENSES.md) before submitting material. New contributions use the applicable software, documentation or data scope unless a different compatible license is explicitly identified and accepted. Preserve authorship and third-party notices. Submit only material you have authority to license. This does not require a blanket copyright assignment or grant permission to redesign the official identity assets.

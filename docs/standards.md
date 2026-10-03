@@ -7,9 +7,9 @@ This archive adopts the `core` profile from [VINASIG Agent Standards](https://gi
 | Field                  | Value                                                              |
 | ---------------------- | ------------------------------------------------------------------ |
 | Source repository      | `VINASIG/agent-standards`                                          |
-| Reviewed source commit | `7c699d1dccd05c1dd2c4f0de4bb3abae23174ccd`                         |
+| Reviewed source commit | `31b105622b1c70f6ad362eaaab429a9afa4b1a18`                         |
 | Profile                | `core`                                                             |
-| Bundle SHA-256         | `bd59e07ba80969e9e5b6788a9438e81ba14a6e22ce121e6ef192ef89f54cd07f` |
+| Bundle SHA-256         | `e7d0fe4b417a782f0613a3367c458e9ff384fed1c43435f76c17252b5c7560e1` |
 | Local provenance       | [.vinasig/provenance.json](../.vinasig/provenance.json)            |
 | Installed file map     | [.vinasig/manifest.json](../.vinasig/manifest.json)                |
 
@@ -40,3 +40,7 @@ The owner requested this standards update across VINASIG. LANG-004 requires natu
 The owner approved original transparent horizontal logos selected for the actual header surface under WEB-001. Keep the source asset bytes, proportions and internal artwork. Avoid white panels, padded or rounded cards and artwork effects. Maintain the accessible logo link and its usable target independently of image size.
 
 This repository has no website header. Its core profile remains appropriate. The source guidance is updated for consuming websites without inventing a browser audit or changing archived asset bytes or directory data.
+
+## Licensing adopted on 4 October 2026
+
+The reviewed snapshot includes the licensing policy, LIC-001 through LIC-004, full GPL/CC texts, material map, brand policy, review template and license checker. It retains its own software/prose grants rather than setting this project's primary license. The owner separately selected this project's scopes in LICENSES.md. Use npm run check:licenses for source metadata/text verification. Web builds also verify published legal text and source notices. Original assets and existing gates remain required.

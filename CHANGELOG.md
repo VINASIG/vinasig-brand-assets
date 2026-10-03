@@ -1,5 +1,12 @@
 # Changelog
 
+## Licensing - 2026-10-04
+
+- License offline integrity tools under GPL-3.0-or-later and authored documentation under CC-BY-SA-4.0.
+- Add the separate VINASIG Brand Usage Policy. Keep original artwork, font notices and historical evidence unchanged.
+- Import the reviewed licensing procedure and nine additional required files. The exact core payload expectation increases from 18 to 27 and asserts each added file. Existing tamper/failure assertions remain required.
+- Check license metadata and publisher text digests without normalizing literal legal text.
+
 ## 2026-10-03
 
 - Prepare `VINASIG/vinasig-brand-assets` for public access with asset selection, typography, rights, contribution and security guidance.

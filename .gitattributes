@@ -21,3 +21,14 @@ scripts/** text eol=lf
 tests/** text eol=lf
 99_Evidence/README.md text eol=lf
 99_Evidence/GENERATE_SHA256.ps1 text eol=lf
+
+# Preserve literal standard license text and installed copies.
+LICENSE -text
+LICENSES/** -text
+.vinasig/standards/LICENSE -text
+.vinasig/standards/LICENSES/** -text
+
+# Publisher license text may end with a blank line. SHA-256 checks protect it.
+LICENSE whitespace=-blank-at-eof
+LICENSES/CC-BY-SA-4.0.txt whitespace=-blank-at-eof
+.vinasig/standards/LICENSES/CC-BY-SA-4.0.txt whitespace=-blank-at-eof
