@@ -7,9 +7,9 @@ This archive adopts the `core` profile from [VINASIG Agent Standards](https://gi
 | Field                  | Value                                                              |
 | ---------------------- | ------------------------------------------------------------------ |
 | Source repository      | `VINASIG/agent-standards`                                          |
-| Reviewed source commit | `c9d33c73a89edaf1773fa4d31f1c7258e549b7b1`                         |
+| Reviewed source commit | `76901601b193c963b849b253d11f51363b447ffe`                         |
 | Profile                | `core`                                                             |
-| Bundle SHA-256         | `ad5dcbe4601a9a3668d3433330a582e6d780b8f2527e1dcc8cfbb93f8f264870` |
+| Bundle SHA-256         | `bb555aad2e5c66da8ba2cdd5530446ca95c1235bb28706cb82066222adcb61f1` |
 | Local provenance       | [.vinasig/provenance.json](../.vinasig/provenance.json)            |
 | Installed file map     | [.vinasig/manifest.json](../.vinasig/manifest.json)                |
 
@@ -30,3 +30,7 @@ Do not manually edit or reformat managed files. A standards update requires a se
 The source installer's `doctor` verifies structural integrity. Actual skill discovery by a new Codex session is `NOT_RUN` in this publication audit. Start a fresh session for runtime discovery; file integrity alone cannot prove what a session loaded.
 
 Responsive, motion, SEO, browser accessibility and page-speed checks are `NOT_APPLICABLE` to this repository's current archive surface. The consuming web project must run its own relevant checks after integrating an asset.
+
+## Interface rules approved on 3 October 2026
+
+The owner requested this standards update across VINASIG. LANG-004 requires natural punctuation, sentence case and custom list markers in authored interfaces. LANG-005 requires ordinary-reader language and limits parenthetical labels. Required code, URLs, times, regulatory identifiers, official names and user input retain their correct syntax.

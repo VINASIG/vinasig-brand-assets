@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "source": {
     "repository": "VINASIG/agent-standards",
-    "ref": "sha256:53c353189ba779053b71995e5de2c3be213d4e4fdc8202f41fd7dcdced6ae22d",
+    "ref": "sha256:317117a7042be27ca08cc3d6e116b1f58b89aa5d11d0272df3591f1a723fcf4b",
     "kind": "local-content-snapshot"
   },
   "files": {
-    ".vinasig/standards/docs/sources.md": "a0ce96dea3cafb237438dd34f4f615a24cfc2e5b7377eb9b744dfb9c421b8bfc",
+    ".vinasig/standards/docs/sources.md": "0c527687d7b3cfaa01c1b7b154f9e2e4054a20a803fea95f19f9bef7b80f4ee5",
     ".vinasig/standards/docs/tool-registry.md": "0cd3b2723a548b698e21a1cea04050ea086d0e5ba5fe3be23c3ef55ccd0f3cee",
     ".vinasig/standards/policies/core.md": "cc2999fe492ea5b90eb8f5cc65ecc04d9113a91e721c6662a7af1a1c8149d210",
-    ".vinasig/standards/policies/language.md": "cbe93ac5ab74f6c99974a77ffbb244623588a882fd934cb95845e8f3f29e30aa",
-    ".vinasig/standards/policies/quality.md": "686be075e13d7659286997ac218beae981a25c685bfb2f27c322672bbcea73c4",
+    ".vinasig/standards/policies/language.md": "ed5092fc303f50a92c9f3ab42911c248c7990f0cacea97dace31ae0500790ce1",
+    ".vinasig/standards/policies/quality.md": "195f59dd6429e2ed4edaa25ec3e540bab403c00582e094d0ec05f99d2ceda4a3",
     ".vinasig/standards/profiles/core.md": "443526edd19e31a0a674863d67dead6a70c1ea6a7e26d209cf14b110a92a62da",
     ".vinasig/standards/schemas/bundle.schema.json": "00040b346772fc6b9c10c4cc386e7171e145e4f48ede389aaa649961fd9cac87",
     ".vinasig/standards/schemas/cli-result.schema.json": "9faadd18a1c2d5452eb11907dbfa46e69635ca4bd6ac890cf88da099d8b98205",
@@ -20,14 +20,14 @@
     ".vinasig/standards/schemas/report.schema.json": "55fa4791b4435b27038ca95a30ff333b1ddf7391adda4fdd67285a1b328dde54",
     ".vinasig/standards/schemas/standards.schema.json": "71b5f063ac0f4f69737d75af3fc2c894c40f756d13e328b2d400c95f1c062dbc",
     ".agents/skills/vinasig-dependencies/SKILL.md": "ff26084bea30cb21c29814407c2c2a62adb44a7c768b1c272a81fb3c19b4af08",
-    ".agents/skills/vinasig-workflow/SKILL.md": "186e033021e4004d81c6465efe46f004b8eeffd45d1cf39feba1cefe0b2c3b63",
-    ".vinasig/standards/standards.json": "2f384e3fd212e3e3872ce31c5557be78e202de11b7d38aa456ea99f0fb715d2b",
+    ".agents/skills/vinasig-workflow/SKILL.md": "ef812919efb1f3caeff3f268d3208927d984997f71c4d482e1df7b4aebaa8586",
+    ".vinasig/standards/standards.json": "898bbba71f7d0c1613a80a5f849991defdb57bbcf1dd74e187e13eecb9a8d237",
     ".vinasig/standards/templates/exception.json": "ecf34e10bd0c1be5ae82b3aa1db732b5d4dfd50f328249e18c5ae2ff901f1bff",
     ".vinasig/standards/templates/report.json": "73e785fd7022b452d6b751d1b2a33b6e6ff680ef588388888081fb278304d70a",
-    ".vinasig/standards/tools.lock.json": "0d4d1ff5cf062b856b9581ebb088bb6a2545e4bc3588d2a5247ab467981626ff"
+    ".vinasig/standards/tools.lock.json": "ed5f942785191c59f833dcd242844b86e7f2ec6c908b146ff0eb01f08b575433"
   },
   "profile": "core",
-  "bundleSha256": "ad5dcbe4601a9a3668d3433330a582e6d780b8f2527e1dcc8cfbb93f8f264870",
+  "bundleSha256": "bb555aad2e5c66da8ba2cdd5530446ca95c1235bb28706cb82066222adcb61f1",
   "agentBlock": "93e9f040b13184b09787f714d8c1b9bc05644eb12dd1458c3b759fc15fa66b3c",
   "agentsCreated": false
 }
