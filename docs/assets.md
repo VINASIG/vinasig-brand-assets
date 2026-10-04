@@ -25,6 +25,8 @@ Use an unchanged transparent horizontal lockup directly on the header's actual s
 
 Do not add a white panel, padded or rounded logo card, border frame, shadow, filter or cropped corners. Keep intentional white shapes inside the original artwork. Preserve the complete aspect ratio, accessible name and a link target of at least 44 by 44 CSS px. The target requirement does not specify a minimum artwork size or change any master export. The contained mark remains available for square avatar contexts. Record an owner-approved reason for an unavoidable header background exception.
 
+On VINASIG websites, link this header or sidebar logo to `https://vinasig.io.vn/` with a localized homepage name. Use separate navigation for a project's own pages and separate GitHub source links. Check the original light/dark artwork, transparent presentation and actual link activation in the local build and the published website.
+
 ## Raster sizes and archival filename corrections
 
 The primary PNG family contains 25, 50, 100, 200, 500 and 1000 px exports. The contained family contains 27, 54, 108, 216, 540 and 1080 px exports. These sizes come from the actual PNG headers.

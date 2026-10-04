@@ -7,9 +7,9 @@ This archive adopts the `core` profile from [VINASIG Agent Standards](https://gi
 | Field                  | Value                                                              |
 | ---------------------- | ------------------------------------------------------------------ |
 | Source repository      | `VINASIG/agent-standards`                                          |
-| Reviewed source commit | `31b105622b1c70f6ad362eaaab429a9afa4b1a18`                         |
+| Reviewed source commit | `3dc9486b3cba4d7d7c4375fa145d73e53b6137a2`                         |
 | Profile                | `core`                                                             |
-| Bundle SHA-256         | `e7d0fe4b417a782f0613a3367c458e9ff384fed1c43435f76c17252b5c7560e1` |
+| Bundle SHA-256         | `eb0d35d45c774fa157fc64763f8bd235d5a7b7ed8c860819c1ce524d76c6d939` |
 | Local provenance       | [.vinasig/provenance.json](../.vinasig/provenance.json)            |
 | Installed file map     | [.vinasig/manifest.json](../.vinasig/manifest.json)                |
 
