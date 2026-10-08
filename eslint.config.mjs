@@ -3,9 +3,10 @@ import { defineConfig } from "eslint/config";
 import tseslint from "typescript-eslint";
 
 export default defineConfig({
-  files: ["scripts/**/*.ts", "tests/**/*.ts"],
+  files: ["scripts/**/*.ts", "tests/**/*.ts", "site/copy.js"],
   extends: [js.configs.recommended, tseslint.configs.strictTypeChecked],
   languageOptions: {
+    globals: { document: "readonly", navigator: "readonly" },
     parserOptions: {
       projectService: true,
       tsconfigRootDir: import.meta.dirname,

@@ -32,3 +32,6 @@ LICENSES/** -text
 LICENSE whitespace=-blank-at-eof
 LICENSES/CC-BY-SA-4.0.txt whitespace=-blank-at-eof
 .vinasig/standards/LICENSES/CC-BY-SA-4.0.txt whitespace=-blank-at-eof
+
+# Keep the reviewed preference stylesheet's original mixed LF/CRLF bytes.
+site/vendor/preferences.css whitespace=cr-at-eol

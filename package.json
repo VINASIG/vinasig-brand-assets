@@ -15,22 +15,32 @@
   },
   "packageManager": "npm@12.2.0",
   "scripts": {
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint scripts tests --max-warnings 0",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.browser.json",
+    "lint": "eslint scripts/*.ts tests/**/*.ts site/copy.js --max-warnings 0",
     "format:check": "prettier --check .",
     "check:assets": "node scripts/check-assets.ts",
     "check:standards": "node scripts/check-standards.ts",
     "build:palette": "node scripts/palette.ts --write",
     "check:palette": "node scripts/palette.ts --check",
-    "check": "npm run typecheck && npm run lint && npm run format:check && npm run check:assets && npm run check:palette && npm run check:standards && npm run check:licenses",
+    "check": "npm run typecheck && npm run lint && npm run lint:css && npm run format:check && npm run check:assets && npm run check:palette && npm run check:standards && npm run check:licenses && npm run build && npm run check:html",
     "test": "node --test tests/*.test.ts",
-    "check:licenses": "node .vinasig/standards/templates/check-licenses.mjs"
+    "check:licenses": "node .vinasig/standards/templates/check-licenses.mjs",
+    "lint:css": "stylelint site/style.css",
+    "check:html": "html-validate dist/index.html dist/en/index.html dist/licenses/index.html dist/en/licenses/index.html",
+    "build": "node scripts/build-site.ts",
+    "preview": "node scripts/serve.ts",
+    "test:web": "playwright test -c tests/playwright.config.ts"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
     "@eslint/js": "10.0.1",
+    "@playwright/test": "1.64.0",
     "@types/node": "24.19.1",
     "eslint": "10.12.0",
+    "html-validate": "11.16.2",
     "prettier": "3.9.9",
+    "stylelint": "17.16.0",
+    "stylelint-config-standard": "40.0.0",
     "typescript": "6.0.3",
     "typescript-eslint": "8.71.0"
   }

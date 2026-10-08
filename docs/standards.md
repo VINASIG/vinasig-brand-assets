@@ -1,6 +1,6 @@
 # VINASIG SI agent standards adoption
 
-This archive adopts the `core` profile from [VINASIG Agent Standards](https://github.com/VINASIG/agent-standards), version 0.1.0 public preview. The profile fits asset preservation, documentation and repository tooling. There is no web application in this repository.
+This archive initially adopted the `core` profile from [VINASIG Agent Standards](https://github.com/VINASIG/agent-standards), version 0.1.0 public preview. The original profile fit asset preservation, documentation and repository tooling. On 8 October 2026 the owner requested a GitHub Pages palette website. The current installation uses `web-static`, with source and digests in [.vinasig/provenance.json](../.vinasig/provenance.json). Earlier imports below remain historical records.
 
 ## Reviewed source
 
@@ -29,7 +29,7 @@ Do not manually edit or reformat managed files. A standards update requires a se
 
 The source installer's `doctor` verifies structural integrity. Actual skill discovery by a new Codex session is `NOT_RUN` in this publication audit. Start a fresh session for runtime discovery; file integrity alone cannot prove what a session loaded.
 
-Responsive, motion, SEO, browser accessibility and page-speed checks are `NOT_APPLICABLE` to this repository's current archive surface. The consuming web project must run its own relevant checks after integrating an asset.
+Responsive, motion, SEO, browser accessibility and page-speed checks were `NOT_APPLICABLE` before the website was added. The palette website now has its own relevant web checks. [Website publication](website.md) records the adoption, delivery and evidence limits.
 
 ## Interface rules approved on 3 October 2026
 

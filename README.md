@@ -4,6 +4,8 @@ The public reference archive for the VINASIG Logo System 1.0, its color palette,
 
 <img src="01_Logos/Contained%20Mark/Exports/VINASIG%20Contained%20Brand%20Mark%20-%2040x%20-%201080x1080.png" alt="VINASIG contained mark" width="160" height="160">
 
+Open the [palette website](https://vinasig.github.io/vinasig-brand-assets/) to browse the Foreground and Background values, copy Hex colors and download the reviewed JSON or SVG. [English](https://vinasig.github.io/vinasig-brand-assets/en/) is independently accessible. The original assets and their rights remain in this archive.
+
 ## Choose an asset
 
 | Need                  | Asset                                                                                                                                                                                             | Selection notes                                                                                                              |
@@ -62,6 +64,24 @@ The asset gate verifies every current asset, the complete original asset set, ac
 ```
 
 This writes `output/checks/SHA256SUMS-current.txt`; it never rewrites the historical checksum list or scans `.git`. [CI](https://github.com/VINASIG/vinasig-brand-assets/actions/workflows/check.yml) runs strict type checking, lint, formatting, integrity checks and regression tests on Linux and Windows.
+
+## Build and publish the website
+
+The website is pre-rendered from `assets/palette.json`. It has no framework, runtime package, analytics or external font service. The shared header, footer and preference runtime come from a pinned Web Design System revision. The default entrypoint follows browser language and system appearance. A manual preference is local to this GitHub Pages origin. Shared cookies with `vinasig.io.vn` require a custom domain under that domain.
+
+```sh
+npm run build
+npm run preview
+```
+
+Preview at `http://127.0.0.1:4178/vinasig-brand-assets/`. `npm run check` also builds and validates all four localized palette/license pages. To run browser regressions after installing the pinned development packages:
+
+```sh
+npx playwright install chromium firefox webkit
+npm run test:web
+```
+
+[GitHub Actions](https://github.com/VINASIG/vinasig-brand-assets/actions/workflows/check.yml) publishes the Ubuntu build only after both Ubuntu and Windows checks pass. Pull requests cannot publish. The deployed `build-record.json` gives the source revision and artifact checksums. Original palette, logo, font and notice bytes are checked independently from web layout. See [deployment, scope and validation](docs/website.md).
 
 ## Archive history
 

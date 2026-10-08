@@ -1,5 +1,14 @@
 # Changelog
 
+## 8 October 2026 - GitHub Pages palette website
+
+- Add a static Vietnamese/English palette viewer with exact Hex copying and byte-identical JSON/SVG downloads.
+- Reuse the reviewed VINASIG header, footer, theme preferences and original font/logo exports. Keep domain-wide synchronization scoped to actual VINASIG subdomains.
+- Adopt the web-static standards profile through the reviewed installer and retain original archive/evidence integrity gates.
+- Add strict browser source checks, generated HTML/CSS validation, deterministic build fixtures and three-engine responsive/accessibility regressions.
+- Publish only the checked artifact after Ubuntu and Windows CI. Tie the website source link and checksums to the actual deployed commit.
+- Preserve existing software/documentation grants, original assets and releases. Retain AGPL terms for the newly reused website software, with complete distributed notices.
+
 ## Palette reconstruction - 2026-10-08
 
 - Keep all five identity Hex values and original artwork unchanged. Add a source JSON, visual SVG and RGB/Hex reference with selected Foreground and all Background shadow values from the owner-supplied Minecraft table.

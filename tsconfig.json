@@ -15,7 +15,8 @@
     "erasableSyntaxOnly": true,
     "verbatimModuleSyntax": true,
     "noEmit": true,
-    "types": ["node"]
+    "types": ["node"],
+    "allowJs": true
   },
-  "include": ["scripts/**/*.ts", "tests/**/*.ts"]
+  "include": ["scripts/**/*.ts", "tests/**/*.ts", "site/copy.js"]
 }

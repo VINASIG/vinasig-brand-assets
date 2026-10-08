@@ -30,7 +30,11 @@ export async function verifyStandards(directory = repositoryRoot): Promise<{
   assert.equal(provenance["format"], 1, "Unsupported provenance format");
   assert.equal(provenance["repository"], "VINASIG/agent-standards");
   assert.match(text(provenance["sourceCommit"]), /^[a-f0-9]{40}$/);
-  assert.equal(provenance["profile"], "core", "Unexpected consumer profile");
+  assert.equal(
+    provenance["profile"],
+    "web-static",
+    "Unexpected consumer profile",
+  );
   const bytes = await readLocal(root, ".vinasig/manifest.json");
   assert.equal(
     digest(bytes),

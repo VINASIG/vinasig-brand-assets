@@ -72,7 +72,7 @@ async function alterCatalog(
   );
 }
 
-await test("the current archive and core snapshot pass their integrity gates", async () => {
+await test("the current archive and web snapshot pass their integrity gates", async () => {
   const assets = await verifyAssets();
   assert.equal(assets.assets, 52);
   assert.equal(assets.originalAssets, 48);
@@ -85,7 +85,7 @@ await test("the current archive and core snapshot pass their integrity gates", a
     ),
   );
   const standards = await verifyStandards();
-  assert.equal(standards.files, 28);
+  assert.equal(standards.files, 55);
   for (const file of [
     "LICENSE",
     "LICENSES.md",

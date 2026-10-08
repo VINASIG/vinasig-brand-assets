@@ -1,4 +1,7 @@
 node_modules/
+dist/
+test-results/
+playwright-report/
 output/
 .vinasig/backups/
 .vinasig/install.lock

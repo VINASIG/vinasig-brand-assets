@@ -1,0 +1,13 @@
+{
+  "format": 1,
+  "repository": "VINASIG/web-design-system",
+  "revision": "57ab71e6245f1f39ffddcf425539860468a46560",
+  "license": "AGPL-3.0-or-later",
+  "files": {
+    "site/vendor/tokens.css": "fbed0dee33d3283894f2438b69c439006aa5f4fc15c41b732deba887610a2c1f",
+    "site/vendor/preferences.css": "6be7425b4b7b56186ee0eaa55e8cf014390b56e464b454927469033a2122fb68",
+    "site/vendor/site-chrome.css": "0443593d2b4e9dbd5e9341e444a52d823900fd534e9b80edcbcddb6b54d0f2a3",
+    "site/vendor/shared-preferences.js": "af933a05e658b258e858ab6df46478bcabe5907aaa0d40bb8ae29a20dbddc729",
+    "site/vendor/control-surfaces.css": "3114cc613a3dfaabfb0c9458ca9384ae43da6ea1a9e9be0e502a07d3ed3a8808"
+  }
+}

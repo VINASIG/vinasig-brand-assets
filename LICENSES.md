@@ -19,6 +19,12 @@ It is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY, 
 | Dependencies and notices  | Vendored libraries, upstream fonts/icons, installed packages and literal license texts retain their original notices. Existing permissive grants are not replaced.                                                       | Their respective original licenses                                   |
 | Shared standards snapshot | Managed .vinasig/standards/ and .agents/skills/ files retain the agent-standards grants rather than inheriting this repository's primary grant.                                                                          | See [.vinasig/standards/LICENSES.md](.vinasig/standards/LICENSES.md) |
 
+## Static website software
+
+The new `site/` interface and `scripts/build-site.ts` use AGPL-3.0-or-later, either version 3 of the License or, at your option, any later version. The shared styles and preference runtime retain that upstream grant. This separate scope does not replace the archive tooling's existing GPL grant or the independent brand and font rights. The full text is in [LICENSES/AGPL-3.0-or-later.txt](LICENSES/AGPL-3.0-or-later.txt).
+
+The public website links to the exact deployed source revision. Its distribution includes the software license texts, source notice, brand policy, documentation notice, original font notice and Lucide notice. See [site/NOTICE.txt](site/NOTICE.txt) and [the website publication decision](docs/website.md). Browser code and CSS have no runtime package dependency. `site/sources.json` pins the reviewed shared source. Sun and Moon icon paths come from Lucide 1.50.0 and retain [their upstream notice](LICENSES/Lucide.txt).
+
 ## Documentation reuse
 
 VINASIG-authored documentation is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](LICENSES/CC-BY-SA-4.0.txt). Credit VINASIG and the respective credited authors, link the source and license, indicate changes, and share adaptations under the applicable share-alike terms. Do not imply endorsement. Embedded artwork and external source material are separately scoped.

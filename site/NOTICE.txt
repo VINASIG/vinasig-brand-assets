@@ -1,0 +1,18 @@
+VINASIG Brand Assets palette website
+
+Website software uses AGPL-3.0-or-later. Archive integrity tools retain
+GPL-3.0-or-later. Authored documentation uses CC-BY-SA-4.0.
+Official identity artwork and palette data remain separately scoped under
+the VINASIG Brand Usage Policy. See LICENSES.md and BRAND_POLICY.md.
+
+Shared interface styles and preferences were copied from
+VINASIG/web-design-system revision 57ab71e6245f1f39ffddcf425539860468a46560.
+They retain AGPL-3.0-or-later. Sun and Moon SVG paths come from Lucide
+1.50.0 and retain the included Lucide.txt notice. Space Grotesk retains
+its original OFL.txt alongside the redistributed font.
+
+The complete preferred source, build scripts and lockfile are public at
+https://github.com/VINASIG/vinasig-brand-assets.
+The site's Source code link and build-record.json identify the actual
+deployed source revision. A modified deployment must provide its own
+corresponding source under the applicable software terms.
