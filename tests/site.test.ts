@@ -10,6 +10,7 @@ import {
   siteOrigin,
 } from "../scripts/build-site.ts";
 import { digest, parseJson, record, repositoryRoot } from "../scripts/local.ts";
+import { parsePalette } from "../scripts/palette.ts";
 
 const revision = "4d22d543fdb69b2e8b7765f5f543c80e42fb2356";
 await test("the static build preserves source bytes, uses the repository base and rebuilds identically", async () => {
@@ -32,6 +33,33 @@ await test("the static build preserves source bytes, uses the repository base an
       first[`downloads/${file}`],
       digest(await readFile(path.join(repositoryRoot, "assets", file))),
     );
+  assert.equal(
+    first["assets/palette.css"],
+    digest(
+      await readFile(path.join(repositoryRoot, "site/vendor/palette.css")),
+    ),
+  );
+  const paletteCss = await readFile(
+    path.join(firstRoot, "assets/palette.css"),
+    "utf8",
+  );
+  const palette = parsePalette(
+    parseJson(await readFile(path.join(repositoryRoot, "assets/palette.json"))),
+  );
+  const tones = palette.colors.flatMap((color) => [
+    ...(color.foreground && color.token
+      ? [{ token: color.token, hex: color.foreground }]
+      : []),
+    ...color.backgrounds,
+  ]);
+  assert.equal((paletteCss.match(/--color-[a-z-]+:/g) ?? []).length, 46);
+  for (const tone of tones)
+    assert(paletteCss.includes(`${tone.token}: ${tone.hex.toLowerCase()};`));
+  assert(
+    (
+      await readFile(path.join(firstRoot, "assets/tokens.css"), "utf8")
+    ).includes('@import "./palette.css";'),
+  );
   for (const [source, emitted] of [
     [
       "01_Logos/Horizontal Lockup/Exports/VINASIG Primary Horizontal Lockup - Primary Color.svg",

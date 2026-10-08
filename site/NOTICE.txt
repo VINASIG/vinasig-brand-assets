@@ -6,7 +6,7 @@ Official identity artwork and palette data remain separately scoped under
 the VINASIG Brand Usage Policy. See LICENSES.md and BRAND_POLICY.md.
 
 Shared interface styles and preferences were copied from
-VINASIG/web-design-system revision 57ab71e6245f1f39ffddcf425539860468a46560.
+VINASIG/web-design-system revision 37ed632e52d4b20fdd6c3a1e9bd2363a75ba4d58.
 They retain AGPL-3.0-or-later. Sun and Moon SVG paths come from Lucide
 1.50.0 and retain the included Lucide.txt notice. Space Grotesk retains
 its original OFL.txt alongside the redistributed font.

@@ -304,7 +304,7 @@ export async function buildSite(
   const sources = record(
     parseJson(await readFile(path.join(repositoryRoot, "site/sources.json"))),
   );
-  assert.equal(sources["revision"], "57ab71e6245f1f39ffddcf425539860468a46560");
+  assert.equal(sources["revision"], "37ed632e52d4b20fdd6c3a1e9bd2363a75ba4d58");
   for (const [file, hash] of Object.entries(record(sources["files"]))) {
     assert(/^site\/vendor\/[a-z-]+\.(css|js)$/.test(file));
     assert.equal(
@@ -338,6 +338,7 @@ export async function buildSite(
     );
   }
   for (const file of [
+    "palette.css",
     "site-chrome.css",
     "preferences.css",
     "control-surfaces.css",

@@ -12,7 +12,7 @@ The normal `npm run build` produces `dist/`. The preview server serves only that
 
 ## Shared design adoption
 
-Reviewed `VINASIG/web-design-system` revision `57ab71e6245f1f39ffddcf425539860468a46560` supplies the unchanged chrome CSS, preference CSS, tokens and shared preference runtime. [site/sources.json](../site/sources.json) pins their SHA-256 digests. The font URL in the emitted token stylesheet is adapted to the deployment base. The palette page adopts that proposal's neutral surfaces and typography while preserving the independently selected palette primitives.
+Reviewed `VINASIG/web-design-system` revision `37ed632e52d4b20fdd6c3a1e9bd2363a75ba4d58` supplies the reviewed chrome CSS, preference CSS, shared palette tokens and preference runtime. [site/sources.json](../site/sources.json) pins their SHA-256 digests. The font URL in the emitted token stylesheet is adapted to the deployment base. The palette page adopts that proposal's neutral surfaces and typography and includes the same generated palette stylesheet used by the Foundations page.
 
 Header artwork is copied from this archive's Primary Color and Reversed horizontal exports. The logo links to the VINASIG homepage. The footer follows the approved home, exact-revision source, issues and licenses order. Theme icons use the exact Lucide 1.50.0 Sun and Moon path data. Their retained upstream notice is distributed with the site.
 
