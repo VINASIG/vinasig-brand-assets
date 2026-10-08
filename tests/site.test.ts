@@ -13,7 +13,9 @@ import { digest, parseJson, record, repositoryRoot } from "../scripts/local.ts";
 import { parsePalette } from "../scripts/palette.ts";
 
 const revision = "4d22d543fdb69b2e8b7765f5f543c80e42fb2356";
-await test("the static build preserves source bytes, uses the repository base and rebuilds identically", async () => {
+await test("the static build preserves source bytes, uses the canonical domain root and rebuilds identically", async () => {
+  assert.equal(siteOrigin, "https://brand.vinasig.io.vn");
+  assert.equal(siteBase, "/");
   const firstRoot = path.join(repositoryRoot, "output/tests/site-first");
   const secondRoot = path.join(repositoryRoot, "output/tests/site-second");
   const first = await buildSite(revision, firstRoot);
@@ -88,6 +90,12 @@ await test("the static build preserves source bytes, uses the repository base an
       "utf8",
     );
     assert(html.includes(`lang="${language}"`));
+    assert.match(
+      html,
+      language === "vi"
+        ? /class="language-switch"[^>]*>\s*EN\s*<\/a\s*>/
+        : /class="language-switch"[^>]*>\s*VI\s*<\/a\s*>/,
+    );
     assert(html.includes(siteOrigin + route(language)));
     assert.equal((html.match(/data-copy-hex=/g) ?? []).length, 46);
     assert.equal((html.match(/data-site-header/g) ?? []).length, 1);

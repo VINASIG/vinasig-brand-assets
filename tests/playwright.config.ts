@@ -9,7 +9,7 @@ export default defineConfig({
   outputDir: "../output/web/results",
   reporter: [["list"], ["json", { outputFile: "../output/web/results.json" }]],
   use: {
-    baseURL: "http://127.0.0.1:4178/vinasig-brand-assets/",
+    baseURL: "http://127.0.0.1:4178/",
     trace: "retain-on-failure",
   },
   projects: [
@@ -28,7 +28,7 @@ export default defineConfig({
   webServer: {
     command: "node scripts/serve.ts",
     cwd: path.resolve(import.meta.dirname, ".."),
-    url: "http://127.0.0.1:4178/vinasig-brand-assets/",
+    url: "http://127.0.0.1:4178/",
     reuseExistingServer: !process.env["CI"],
     timeout: 30_000,
   },

@@ -77,6 +77,9 @@ for (const language of ["vi", "en"] as const) {
         });
         await expect(page.locator("html")).toHaveAttribute("data-theme", theme);
         await expect(page.locator("[data-theme-toggle]")).toBeEnabled();
+        await expect(page.locator(".language-switch")).toHaveText(
+          language === "vi" ? "EN" : "VI",
+        );
         for (const width of widths) {
           await page.setViewportSize({
             width,
@@ -185,7 +188,7 @@ test("system defaults, blocked scripts, native navigation and keyboard actions w
       viewport: { width: 320, height: 800 },
     });
     const page = await context.newPage();
-    await page.goto("http://127.0.0.1:4178/vinasig-brand-assets/");
+    await page.goto("http://127.0.0.1:4178/");
     await expect(page.locator("[data-theme-toggle]")).toBeDisabled();
     await expect(page.locator("[data-copy-hex]").first()).toBeDisabled();
     expect(await page.evaluate(inspectSiteChrome)).toEqual([]);
@@ -199,7 +202,7 @@ test("system defaults, blocked scripts, native navigation and keyboard actions w
     colorScheme: "dark",
   });
   const page = await context.newPage();
-  await page.goto("http://127.0.0.1:4178/vinasig-brand-assets/");
+  await page.goto("http://127.0.0.1:4178/");
   await expect(page).toHaveURL(/\/en\/$/);
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
   expect(await page.evaluate(() => localStorage.length)).toBe(0);

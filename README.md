@@ -4,7 +4,7 @@ The public reference archive for the VINASIG Logo System 1.0, its color palette,
 
 <img src="01_Logos/Contained%20Mark/Exports/VINASIG%20Contained%20Brand%20Mark%20-%2040x%20-%201080x1080.png" alt="VINASIG contained mark" width="160" height="160">
 
-Open the [palette website](https://vinasig.github.io/vinasig-brand-assets/) to browse the base colors and deep tones, copy Hex colors and download the reviewed JSON or SVG. [English](https://vinasig.github.io/vinasig-brand-assets/en/) is independently accessible. The original assets and their rights remain in this archive.
+Open the [palette website](https://brand.vinasig.io.vn/) to browse the base colors and deep tones, copy Hex colors and download the reviewed JSON or SVG. [English](https://brand.vinasig.io.vn/en/) is independently accessible. The original assets and their rights remain in this archive.
 
 ## Choose an asset
 
@@ -67,7 +67,7 @@ This writes `output/checks/SHA256SUMS-current.txt`; it never rewrites the histor
 
 ## Build and publish the website
 
-The website is pre-rendered from `assets/palette.json`. It has no framework, runtime package, analytics or external font service. The shared header, footer and preference runtime come from a pinned Web Design System revision. The default entrypoint follows browser language and system appearance. A manual preference is local to this GitHub Pages origin. Shared cookies with `vinasig.io.vn` require a custom domain under that domain.
+The website is pre-rendered from `assets/palette.json`. It has no framework, runtime package, analytics or external font service. The shared header, footer and preference runtime come from a pinned Web Design System revision. The default entrypoint follows browser language and system appearance. Explicit language and appearance choices synchronize with other HTTPS VINASIG subdomains through finite shared preference cookies. Origin-local storage is a fallback when cookies are unavailable. An external language change preserves ongoing work and applies on the next load.
 
 ```sh
 npm run build

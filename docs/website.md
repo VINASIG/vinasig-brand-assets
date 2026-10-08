@@ -1,6 +1,6 @@
 # GitHub Pages publication
 
-The owner requested GitHub Pages deployment on 8 October 2026 after the palette reconstruction. The canonical site is https://vinasig.github.io/vinasig-brand-assets/. This publication adds a static palette interface to the existing archive. It does not modify the original artwork, fonts, palette values, evidence, existing releases or tags.
+The owner requested GitHub Pages deployment on 8 October 2026 after the palette reconstruction, then required the palette site to participate in ecosystem preferences. The canonical site is https://brand.vinasig.io.vn/. GitHub Pages remains the host. Its original repository URL redirects to the custom domain. This publication adds a static palette interface to the existing archive. It does not modify the original artwork, fonts, palette values, evidence, existing releases or tags.
 
 ## Implementation
 
@@ -16,7 +16,7 @@ Reviewed `VINASIG/web-design-system` revision `37ed632e52d4b20fdd6c3a1e9bd2363a7
 
 Header artwork is copied from this archive's Primary Color and Reversed horizontal exports. The logo links to the VINASIG homepage. The footer follows the approved home, exact-revision source, issues and licenses order. Theme icons use the exact Lucide 1.50.0 Sun and Moon path data. Their retained upstream notice is distributed with the site.
 
-The default route follows browser language and system appearance without writing a preference. Both locales remain separately rendered. Manual choices have an origin-local fallback on `github.io`. They cannot synchronize cookies with `vinasig.io.vn`, which is a different domain. The reviewed runtime supports that synchronization if a future authorized deployment uses an HTTPS subdomain of `vinasig.io.vn`. No clock-based theme inference, remote preference service or cross-domain workaround is used.
+The default route follows browser language and system appearance without writing a preference. Both locales remain separately rendered. The header uses the same EN and VI labels as Web Design System. Explicit choices use the reviewed `__Secure-vinasig-theme` and `__Secure-vinasig-language` cookies with `Domain=vinasig.io.vn`, `Path=/`, `Secure`, `SameSite=Lax` and one-year maximum age. Only finite language and theme values are shared. Theme synchronization does not navigate. A language change from another tab is deferred after interaction so it cannot discard active work. Origin-local storage remains a fallback when cookies are blocked. No clock-based theme inference, remote preference service or cross-domain workaround is used.
 
 The standards installer updated the consumer from `core` to `web-static` using reviewed Agent Standards revision `1c0eedf84313b1a06e73e7d0be6249e3a039f7cc`. The approved bundle digest is `7927fbaa1c3b9dbd7a2ac3ee611fe8e33476d26c0c9c4f94ef61d1fcb0a2ba0b`. The dry-run and rollback record are retained locally. Managed files were not edited by hand.
 
@@ -41,7 +41,7 @@ All selected versions support Node 24.21.0. Existing TypeScript, ESLint and form
 - Strict TypeScript, checked browser JavaScript, typed lint, Stylelint and generated HTML validation run before publication.
 - Playwright tests use Chromium, Firefox and WebKit with zero configured retries. Palette/license routes are checked in both locales/themes, 320/360/390/768/1024/1440 px, intermediate widths, actual 760 px breakpoint neighbors and 200 percent text. They inspect shared chrome, original artwork, visible copy, control surfaces, reflow and axe findings.
 - Native locale links work without JavaScript. Unavailable-script copy buttons remain disabled and readable. Keyboard theme changes and preference reload behavior are tested. Clipboard success uses Chromium's real clipboard. Denied clipboard access is an explicit adversarial fixture in all engines.
-- Reviewed shared-preference fixtures test system defaults, two distinct intercepted HTTPS origins, malformed/denied storage and protected active state. This is fixture evidence, not a claim that the production GitHub host shares cookies with the VINASIG domain.
+- Reviewed shared-preference fixtures test system defaults, two distinct intercepted HTTPS origins, malformed/denied storage and protected active state. Production synchronization is separately checked between the real Brand Assets, Design System, TOTP and password websites.
 - The product-owned preference fixture adapts the upstream origin-root entrypoint to the repository base path. A source comparison test retains every upstream assertion and permits only those pathname substitutions plus formatting. Managed helper bytes remain unchanged.
 - Capture and open both page ends, narrow/desktop layouts, both languages/themes and enlarged text before delivery. After deployment verify exact source revision, original downloads, public metadata, sitemap, live interactions and rendered header/footer.
 
@@ -53,9 +53,9 @@ These are automated and SI-agent observations. Independent design review, real-p
 
 The workflow pins every Action by commit. Ubuntu 24.04 and Windows 2025 replace mutable `*-latest` OS labels, but their managed runner images can still change. Publication depends on both jobs and uses only the checked Ubuntu artifact. GitHub's deployment environment uses Pages permissions and OIDC, with no stored deployment credential. Pull requests do not deploy.
 
-The default GitHub Pages address needs no owner-managed Cloudflare DNS or custom-domain setup. Localized canonicals, reciprocal hreflang, the deployed sitemap and public robots file use the repository base. The sitemap is https://vinasig.github.io/vinasig-brand-assets/sitemap.xml. The built sitemap is not proof of Google indexing. Search Console property verification, sitemap submission and indexing are separate account actions and are not implied by this Pages request.
+The Pages custom-domain setting must name `brand.vinasig.io.vn` before adding DNS. The scoped Cloudflare record is CNAME `brand` pointing to `vinasig.github.io`, DNS only, automatic TTL. Pages enforces HTTPS after its certificate is available. Localized canonicals, reciprocal hreflang, the sitemap and robots file use the custom-domain root. The sitemap is https://brand.vinasig.io.vn/sitemap.xml. The built sitemap is not proof of Google indexing. Search Console submission, Google fetch status and indexing remain separate observations.
 
-No change to the existing `VINASIG/vinasig` repository is included in this task. Its existing resource entry still links to the source archive. A future authorized canonical-domain rollout can update that entry and enable domain-wide preferences.
+The existing VINASIG website and organization profiles retain their accurate source-archive links and asset descriptions. The repository's About homepage points to the canonical palette website after live verification.
 
 ## License review
 

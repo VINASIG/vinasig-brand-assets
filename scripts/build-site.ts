@@ -16,8 +16,8 @@ import {
   repositoryRoot,
 } from "./local.ts";
 
-export const siteOrigin = "https://vinasig.github.io";
-export const siteBase = "/vinasig-brand-assets/";
+export const siteOrigin = "https://brand.vinasig.io.vn";
+export const siteBase = "/";
 const repository = "https://github.com/VINASIG/vinasig-brand-assets";
 type Language = "vi" | "en";
 const copy = {
@@ -209,7 +209,7 @@ function shell(
     <header data-site-header><a href="https://vinasig.io.vn/" data-brand-logo aria-label="${c.home}">
     <picture><source media="(prefers-color-scheme: dark)" srcset="${siteBase}assets/reversed.svg"><img src="${siteBase}assets/primary-color.svg" width="540" height="140" alt="VINASIG"></picture></a>
     <div class="site-preferences"><button class="theme-switch" type="button" data-theme-toggle disabled aria-label="${c.dark}" aria-pressed="false">${icon("moon")}${icon("sun")}</button>
-    <a class="language-switch" href="${route(alternate, licenses)}" hreflang="${alternate}" lang="${alternate}" aria-label="${c.language}">${alternate === "en" ? "En" : "Vi"}</a></div></header>
+    <a class="language-switch" data-copy-notation="ISO 639-1 language code" href="${route(alternate, licenses)}" hreflang="${alternate}" lang="${alternate}" aria-label="${c.language}">${alternate === "en" ? "EN" : "VI"}</a></div></header>
     <main id="content" tabindex="-1">${content}</main>
     <footer class="site-footer" data-site-footer><a class="footer-home" href="https://vinasig.io.vn/" aria-label="${c.home}">VINASIG</a>
     <nav class="footer-links" aria-label="${c.footer}"><a href="${repository}/tree/${revision}" data-source-link>${c.source}</a><a href="${repository}/issues">${c.issues}</a><a href="${route(language, true)}">${c.licenses}</a></nav></footer>
