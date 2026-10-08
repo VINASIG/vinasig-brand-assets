@@ -85,7 +85,7 @@ await test("the current archive and web snapshot pass their integrity gates", as
     ),
   );
   const standards = await verifyStandards();
-  assert.equal(standards.files, 55);
+  assert.equal(standards.files, 56);
   for (const file of [
     "LICENSE",
     "LICENSES.md",
