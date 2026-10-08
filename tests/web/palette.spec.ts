@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, type Page } from "@playwright/test";
 import { AxeBuilder } from "@axe-core/playwright";
 import { inspectSiteChrome } from "../../.vinasig/standards/templates/web/site-chrome.mjs";
 import {
@@ -10,6 +10,49 @@ import {
 import { checkSharedPreferences } from "../helpers/preferences.mjs";
 
 const widths = [320, 360, 390, 600, 759, 760, 761, 768, 900, 1024, 1440];
+
+async function expectFilledSwatches(page: Page): Promise<void> {
+  const measured = await page.locator(".color-card").evaluateAll((cards) =>
+    cards.map((card) => {
+      const row = card.querySelector(".swatch-row");
+      const container = row ?? card;
+      const style = getComputedStyle(container);
+      const bounds = container.getBoundingClientRect();
+      const left =
+        bounds.left +
+        parseFloat(style.borderLeftWidth) +
+        parseFloat(style.paddingLeft);
+      const right =
+        bounds.right -
+        parseFloat(style.borderRightWidth) -
+        parseFloat(style.paddingRight);
+      const boxes = [...container.querySelectorAll(".swatch")].map((swatch) =>
+        swatch.getBoundingClientRect(),
+      );
+      const first = boxes[0];
+      const last = boxes.at(-1);
+      return {
+        id: card.getAttribute("data-palette-id"),
+        count: boxes.length,
+        leftGap: first ? first.left - left : Infinity,
+        rightGap: last ? right - last.right : Infinity,
+        widthDifference:
+          first && last ? Math.abs(first.width - last.width) : Infinity,
+      };
+    }),
+  );
+  expect(measured.filter((card) => card.count === 1)).toHaveLength(12);
+  expect(measured.filter((card) => card.count === 2)).toHaveLength(17);
+  expect(
+    measured.filter(
+      (card) =>
+        Math.abs(card.leftGap) > 1 ||
+        Math.abs(card.rightGap) > 1 ||
+        card.widthDifference > 1,
+    ),
+  ).toEqual([]);
+}
+
 for (const language of ["vi", "en"] as const) {
   for (const theme of ["light", "dark"] as const) {
     for (const licenses of [false, true]) {
@@ -61,6 +104,7 @@ for (const language of ["vi", "en"] as const) {
           if (!licenses) {
             await expect(page.locator("[data-copy-hex]")).toHaveCount(46);
             await expect(page.locator(".color-card")).toHaveCount(29);
+            await expectFilledSwatches(page);
           }
           await page.evaluate(() => {
             window.scrollTo(0, document.documentElement.scrollHeight);
@@ -108,6 +152,7 @@ for (const language of ["vi", "en"] as const) {
               }),
             );
           expect(wrapping).toBe(false);
+          await expectFilledSwatches(page);
         }
         await page.evaluate(() => {
           window.scrollTo(0, 0);

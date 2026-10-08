@@ -190,12 +190,9 @@ section {
   font-size: 0.75rem;
 }
 
-.deep-grid .swatch {
+.color-card > .swatch {
+  width: 100%;
   margin-block-start: var(--space-4);
-}
-
-.deep-grid .swatch-row .swatch {
-  margin-block-start: 0;
 }
 
 .palette-credit {
