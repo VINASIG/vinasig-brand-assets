@@ -17,19 +17,21 @@ import {
   writeOutput,
 } from "./local.ts";
 
-type Group = "identity" | "support" | "neutral" | "shadow";
-type Edition = "unsplit" | "java" | "bedrock";
+type Group = "identity" | "support" | "neutral" | "deep";
 interface Background {
-  edition: Edition;
+  id: string;
+  name: string;
+  nameVi: string;
+  token: string;
   hex: string;
 }
 export interface PaletteColor {
   id: string;
   name: string;
+  nameVi: string;
   group: Group;
-  code: string;
-  sourceName: string;
-  foreground: string;
+  foreground?: string;
+  token?: string;
   backgrounds: Background[];
 }
 export interface Palette {
@@ -37,9 +39,37 @@ export interface Palette {
   colors: PaletteColor[];
 }
 
-const sourceCodes = Array.from("0123456789abcdefghijmnpqstuvw").map(
-  (code) => `§${code}`,
-);
+const paletteIds = [
+  "scout-blue",
+  "thinker-orange",
+  "builder-green",
+  "auditor-red",
+  "core-graphite",
+  "clay",
+  "saffron",
+  "lagoon",
+  "violet",
+  "sky",
+  "porcelain",
+  "fog",
+  "stone",
+  "slate",
+  "ink",
+  "paper",
+  "indigo-deep",
+  "forest-deep",
+  "ocean-deep",
+  "burgundy-deep",
+  "plum-deep",
+  "amber-deep",
+  "cobalt-deep",
+  "meadow-deep",
+  "glacier-deep",
+  "rose-deep",
+  "orchid-deep",
+  "sunlight-deep",
+  "citron-deep",
+];
 const identity: Readonly<Record<string, string>> = {
   "scout-blue": "#21497B",
   "thinker-orange": "#EB7114",
@@ -76,60 +106,103 @@ export function contrast(first: string, second: string): number {
 
 export function parsePalette(value: unknown): Palette {
   const document = record(value);
-  assert.equal(document["format"], 1, "Unsupported palette format");
+  assert.equal(document["format"], 2, "Unsupported palette format");
   const reviewedOn = text(document["reviewedOn"]);
   assert.match(reviewedOn, /^\d{4}-\d{2}-\d{2}$/);
   const source = record(document["source"]);
   assert.equal(source["url"], sourceUrl, "Unexpected palette source");
   checksum(source["submittedHtmlSha256"]);
+  assert.equal(source["inspiration"], "Palette inspired by Minecraft.");
+  assert.equal(
+    source["previousRevision"],
+    "5fc143f20ac758a2584fa9d59482526456c78efb",
+  );
+  assert.equal(
+    source["previousPaletteSha256"],
+    "069b4b4bfb3c7cc131026f1cc122596ca47dbe4536cc99428f91968512d10002",
+  );
   const values = document["colors"];
   assert(Array.isArray(values), "Expected a palette color list");
   const colors = (values as unknown[]).map((candidate): PaletteColor => {
     const color = record(candidate);
     const id = text(color["id"]);
     const name = text(color["name"]);
-    const code = text(color["code"]);
-    const sourceName = text(color["sourceName"]);
+    const nameVi = text(color["nameVi"]);
+    assert.match(nameVi, /^[\p{L} ]+$/u, "Invalid Vietnamese display name");
     const group = text(color["group"]);
-    const foreground = text(color["foreground"]);
     assert.match(id, /^[a-z]+(?:-[a-z]+)*$/, "Invalid palette ID");
     assert.match(name, /^[A-Za-z ]+$/, "Invalid palette display name");
-    assert.match(sourceName, /^[a-z_]+$/, "Invalid source name");
+    assert(
+      !("code" in color) && !("sourceName" in color),
+      "Use VINASIG identifiers only",
+    );
     assert(
       group === "identity" ||
         group === "support" ||
         group === "neutral" ||
-        group === "shadow",
+        group === "deep",
       "Invalid palette group",
     );
-    rgb(foreground);
+    const base =
+      group === "deep"
+        ? {}
+        : {
+            foreground: text(color["foreground"]),
+            token: text(color["token"]),
+          };
+    if ("foreground" in base) {
+      rgb(base.foreground);
+      assert.equal(
+        base.token,
+        group === "identity" ? `--color-${id}` : `--color-palette-${id}`,
+        "Invalid base token",
+      );
+    } else
+      assert(
+        !("foreground" in color) && !("token" in color),
+        "Deep-only colors must not include excluded base colors",
+      );
     const backgroundValues = color["backgrounds"];
     assert(Array.isArray(backgroundValues), "Expected Background values");
     const backgrounds = (backgroundValues as unknown[]).map(
       (candidateBackground): Background => {
         const background = record(candidateBackground);
-        const edition = text(background["edition"]);
+        const toneId = text(background["id"]);
+        const toneName = text(background["name"]);
+        const toneNameVi = text(background["nameVi"]);
+        assert.match(
+          toneNameVi,
+          /^[\p{L} ]+$/u,
+          "Invalid Vietnamese deep name",
+        );
+        const token = text(background["token"]);
         const hex = text(background["hex"]);
-        assert(
-          edition === "unsplit" || edition === "java" || edition === "bedrock",
-          "Invalid Background edition",
+        assert.match(toneName, /^[A-Za-z ]+$/, "Invalid deep display name");
+        assert.equal(
+          token,
+          group === "identity"
+            ? `--color-${toneId}`
+            : `--color-palette-${toneId}`,
+          "Invalid deep token",
         );
         rgb(hex);
-        return { edition, hex };
+        return { id: toneId, name: toneName, nameVi: toneNameVi, token, hex };
       },
     );
     assert.deepEqual(
-      backgrounds.map((background) => background.edition),
-      code === "§6" ? ["java", "bedrock"] : ["unsplit"],
-      "Missing or ambiguous Background edition",
+      backgrounds.map((background) => background.id),
+      id === "amber-deep"
+        ? ["amber-olive-deep", "amber-umber-deep"]
+        : [group === "deep" ? id : `${id}-deep`],
+      "Missing or ambiguous deep tone",
     );
-    return { id, name, group, code, sourceName, foreground, backgrounds };
+    return { id, name, nameVi, group, ...base, backgrounds };
   });
   assert.equal(new Set(colors.map((color) => color.id)).size, colors.length);
   assert.deepEqual(
-    colors.map((color) => color.code).sort(),
-    [...sourceCodes].sort(),
-    "Missing or duplicated source code",
+    colors.map((color) => color.id),
+    paletteIds,
+    "Missing or duplicated palette ID",
   );
   assert.deepEqual(
     colors
@@ -148,8 +221,8 @@ export function parsePalette(value: unknown): Palette {
   assert(Array.isArray(conflicts) && conflicts.length === 2);
   for (const candidate of conflicts as unknown[]) {
     const conflict = record(candidate);
-    const color = colors.find((entry) => entry.code === conflict["code"]);
-    assert(color, "Unknown source conflict code");
+    const color = colors.find((entry) => entry.id === conflict["id"]);
+    assert(color?.foreground, "Unknown source conflict ID");
     assert.equal(conflict["foregroundHex"], color.foreground);
     assert.deepEqual(
       conflict["resolvedForegroundRgb"],
@@ -162,17 +235,25 @@ export function parsePalette(value: unknown): Palette {
       "Source conflict must record an actual difference",
     );
   }
+  const stats = statistics({ reviewedOn, colors });
+  assert.deepEqual(
+    stats,
+    { selectedForegrounds: 16, backgrounds: 30, uniqueColors: 45 },
+    "Selected palette inventory changed",
+  );
   return { reviewedOn, colors };
 }
 
 export function statistics(palette: Palette) {
-  const selected = palette.colors.filter((color) => color.group !== "shadow");
+  const selected = palette.colors.filter((color) => color.group !== "deep");
   const backgrounds = palette.colors.flatMap((color) => color.backgrounds);
   return {
     selectedForegrounds: selected.length,
     backgrounds: backgrounds.length,
     uniqueColors: new Set([
-      ...selected.map((color) => color.foreground),
+      ...selected.flatMap((color) =>
+        color.foreground ? [color.foreground] : [],
+      ),
       ...backgrounds.map((background) => background.hex),
     ]).size,
   };
@@ -187,11 +268,11 @@ export function renderPalette(palette: Palette): string {
   const parts = [
     '<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1376" viewBox="0 0 1120 1376" role="img" aria-labelledby="title description">',
     '<title id="title">VINASIG color palette</title>',
-    '<desc id="description">Five preserved identity colors, supporting colors and neutrals with their Minecraft Background shadow values. Additional shadows retain both Gold edition variants. The paired swatches show provenance, not approved text/background combinations.</desc>',
+    '<desc id="description">Five preserved identity colors, supporting colors, neutrals and deep tones. Paired swatches are color references, not approved text and background combinations.</desc>',
     '<rect width="1120" height="1376" fill="#FFFFFF"/>',
     '<g font-family="Space Grotesk, Arial, sans-serif" fill="#443A3B">',
     '<text x="32" y="49" font-size="32" font-weight="700">VINASIG color palette</text>',
-    '<text x="32" y="80" font-size="17">Upper swatch is Foreground. Lower swatch is Background, the source text-shadow color.</text>',
+    '<text x="32" y="80" font-size="17">Upper swatch is Base. Lower swatch is Deep.</text>',
   ];
   const sections: {
     group: Group;
@@ -224,110 +305,83 @@ export function renderPalette(palette: Palette): string {
         assert(background);
         parts.push(
           `<text x="${String(x)}" y="${String(y)}" font-size="17" font-weight="700">${color.name}</text>`,
-          swatch(x, y + 15, width, color.foreground),
+          swatch(x, y + 15, width, color.foreground ?? ""),
           swatch(x, y + 63, width, background.hex),
-          `<text x="${String(x)}" y="${String(y + 131)}" font-size="16">${color.code}</text>`,
         );
       });
   }
   parts.push(
-    '<text x="32" y="785" font-size="22" font-weight="700">Additional Background colors</text>',
-    '<text x="32" y="813" font-size="17">Their source Foreground colors are excluded from the selected palette.</text>',
+    '<text x="32" y="785" font-size="22" font-weight="700">Additional deep tones</text>',
+    '<text x="32" y="813" font-size="17">Reference tones for contexts that need darker colors.</text>',
   );
   palette.colors
-    .filter((color) => color.group === "shadow")
+    .filter((color) => color.group === "deep")
     .flatMap((color) =>
       color.backgrounds.map((background) => ({ color, background })),
     )
-    .forEach(({ color, background }, index) => {
+    .forEach(({ background }, index) => {
       const x = 32 + (index % 4) * 268;
       const y = 853 + Math.floor(index / 4) * 110;
-      const edition =
-        background.edition === "java"
-          ? " - Java"
-          : background.edition === "bedrock"
-            ? " - Bedrock"
-            : "";
       parts.push(
-        `<text x="${String(x)}" y="${String(y)}" font-size="17">${color.name}${edition}</text>`,
+        `<text x="${String(x)}" y="${String(y)}" font-size="17">${background.name}</text>`,
         swatch(x, y + 13, 252, background.hex),
-        `<text x="${String(x)}" y="${String(y + 77)}" font-size="15">${color.code}</text>`,
       );
     });
   const counts = statistics(palette);
   parts.push(
-    `<text x="32" y="1336" font-size="17">${String(counts.selectedForegrounds)} selected Foreground values, ${String(counts.backgrounds)} Background values, ${String(counts.uniqueColors)} distinct sRGB colors.</text>`,
+    `<text x="32" y="1336" font-size="17">${String(counts.selectedForegrounds)} base colors, ${String(counts.backgrounds)} deep tones, ${String(counts.uniqueColors)} distinct sRGB colors.</text>`,
     `<text x="32" y="1361" font-size="15">Reviewed ${palette.reviewedOn}. See docs/colors.md for source decisions and text contrast.</text>`,
     "</g></svg>",
   );
   return `${parts.join("\n")}\n`;
 }
 
-function editionLabel(edition: Edition): string {
-  return edition === "java"
-    ? "Java"
-    : edition === "bedrock"
-      ? "Bedrock"
-      : "Source row";
-}
-
 export function renderReference(palette: Palette): string {
   const parts = [
     "# VINASIG palette reference",
     "",
-    "Generated from [palette.json](../assets/palette.json) by [the palette renderer](../scripts/palette.ts). Read [selection and use](colors.md) before choosing colors. RGB values are derived from Hex. Background means the source text-shadow color.",
+    "Generated from [palette.json](../assets/palette.json). Names, Hex values and CSS tokens are shared with the Web Design System. RGB is derived from Hex.",
     "",
-    "## Selected Foreground values and corresponding Background values",
+    "## Base colors",
     "",
-    "| Name | Group | Source code | Foreground | Foreground RGB | Background | Background RGB |",
-    "| --- | --- | --- | --- | --- | --- | --- |",
+    "| Name | Group | Hex | RGB | CSS token |",
+    "| --- | --- | --- | --- | --- |",
   ];
-  for (const color of palette.colors.filter(
-    (entry) => entry.group !== "shadow",
-  ))
-    for (const background of color.backgrounds)
+  for (const color of palette.colors)
+    if (color.foreground && color.token)
       parts.push(
-        `| ${color.name} | ${color.group} | \`${color.code}\` | \`${color.foreground}\` | ${rgb(color.foreground).join(", ")} | \`${background.hex}\` | ${rgb(background.hex).join(", ")} |`,
+        `| ${color.name} | ${color.group} | \`${color.foreground}\` | ${rgb(color.foreground).join(", ")} | \`${color.token}\` |`,
       );
   parts.push(
     "",
-    "## Additional Background values",
+    "## Deep tones",
     "",
-    "Excluded Foreground values remain in the source JSON for traceability. They are not selected palette colors. Edition labels distinguish the two Gold shadow values. Source row means no edition split is needed for that value, not that its code is supported by every Minecraft edition.",
-    "",
-    "| Name | Source code | Source name | Background | Background RGB | Edition |",
-    "| --- | --- | --- | --- | --- | --- |",
+    "| Name | Hex | RGB | CSS token |",
+    "| --- | --- | --- | --- |",
   );
-  for (const color of palette.colors.filter(
-    (entry) => entry.group === "shadow",
-  ))
-    for (const background of color.backgrounds)
+  for (const color of palette.colors)
+    for (const tone of color.backgrounds)
       parts.push(
-        `| ${color.name} | \`${color.code}\` | \`${color.sourceName}\` | \`${background.hex}\` | ${rgb(background.hex).join(", ")} | ${editionLabel(background.edition)} |`,
+        `| ${tone.name} | \`${tone.hex}\` | ${rgb(tone.hex).join(", ")} | \`${tone.token}\` |`,
       );
   parts.push(
     "",
-    "## Matched source-pair contrast",
+    "## Base and deep contrast",
     "",
-    "These measurements compare selected source Foreground values with their corresponding Background values. They do not recommend using every pair. Threshold decisions use the unrounded ratio. Displayed ratios are truncated to two decimals. AA normal text requires at least 4.5 to 1. Large text and required non-text boundaries need separate context checks.",
+    "These measurements describe actual sRGB pairs. They do not recommend using every base color as text on its corresponding deep tone. Normal text needs at least 4.5 to 1. Decisions use the unrounded ratio.",
     "",
-    "| Name | Foreground | Background | Contrast | AA normal text |",
+    "| Name | Base | Deep | Contrast | AA normal text |",
     "| --- | --- | --- | --- | --- |",
   );
-  for (const color of palette.colors.filter(
-    (entry) => entry.group !== "shadow",
-  ))
-    for (const background of color.backgrounds) {
-      const ratio = contrast(color.foreground, background.hex);
-      parts.push(
-        `| ${color.name} | \`${color.foreground}\` | \`${background.hex}\` | ${(Math.floor(ratio * 100) / 100).toFixed(2)} | ${ratio >= 4.5 ? "PASS" : "FAIL"} |`,
-      );
-    }
-  parts.push(
-    "",
-    `Source values are from the [owner-supplied Minecraft color table](${sourceUrl}). Selection, names and formatting are adapted for VINASIG. The two source RGB conflicts are retained in palette.json. This reference does not certify current game implementation values or Mojang endorsement.`,
-    "",
-  );
+  for (const color of palette.colors)
+    if (color.foreground)
+      for (const tone of color.backgrounds) {
+        const ratio = contrast(color.foreground, tone.hex);
+        parts.push(
+          `| ${color.name} | \`${color.foreground}\` | \`${tone.hex}\` | ${(Math.floor(ratio * 100) / 100).toFixed(2)} | ${ratio >= 4.5 ? "PASS" : "FAIL"} |`,
+        );
+      }
+  parts.push("", "Palette inspired by Minecraft.", "");
   return parts.join("\n");
 }
 

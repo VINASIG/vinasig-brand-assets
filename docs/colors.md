@@ -1,51 +1,34 @@
 # VINASIG color palette
 
-![VINASIG palette with Foreground and Background swatches](../assets/palette.svg)
+![VINASIG base colors and deep tones](../assets/palette.svg)
 
-The palette was reconstructed on 8 October 2026 from the Minecraft color table supplied by the owner. The five identity colors and every original logo remain unchanged. The previous identity table contained five material-derived colors, black and white. It did not include the source Background values.
+Palette inspired by Minecraft.
 
-Read the [complete Hex and RGB reference](palette-reference.md), use the [source JSON](../assets/palette.json), or view the [SVG sheet](../assets/palette.svg). Selection is a design decision, not evidence that these colors are best for every user or application.
+The shared palette has 16 base colors, 30 deep tones and 45 distinct sRGB Hex values. Brand Assets owns the [canonical JSON](../assets/palette.json). Web Design System adopts a revision-pinned copy for its CSS tokens and Foundations page. Both projects use the same VINASIG names and values. Original artwork and the five identity anchors are unchanged.
 
-## Foreground and Background
+Use the [Hex, RGB and token reference](palette-reference.md), [JSON](../assets/palette.json) or [SVG sheet](../assets/palette.svg). These are reusable color primitives. Semantic interface tokens remain in [Web Design System](https://github.com/VINASIG/web-design-system).
 
-In the source table, Foreground is the text color and Background is the text-shadow color. Background does not describe a Minecraft page or block fill. This palette makes those exact shadow values available as dark color primitives.
+## Names and roles
 
-Source column names describe provenance. A selected Foreground color can be used as a surface, and a Background value can be used as an accent. Choose the actual text and surface together. Matching source columns do not imply an accessible combination or a light/dark theme. Quartz Surface and Iron Surface come from the source Foreground column and provide lighter neutral surfaces.
+- Identity keeps Scout Blue, Thinker Orange, Builder Green, Auditor Red and Core Graphite.
+- Support uses Clay, Saffron, Lagoon, Violet and Sky.
+- Neutral uses Porcelain, Fog, Stone, Slate, Ink and Paper.
+- Deep tones retain all reviewed darker values with their own names and tokens. Amber Olive Deep and Amber Umber Deep keep both distinct brown/olive tones.
 
-## Selection
+Base colors and their deep tones are references, not automatic light/dark theme pairs. Deep does not mean an approved website background. Choose each actual text and surface pair together.
 
-- Identity keeps Scout Blue, Thinker Orange, Builder Green, Auditor Red and Core Graphite. Their Hex values are already present in the preserved artwork and [logo story](../VINASIG_Logo_Story.md).
-- Support adds Copper, Amber, Teal, Violet and Soft Blue for illustrations, category accents and occasional highlights. They do not replace the four agent roles.
-- Neutral adds Quartz Surface, Iron Surface, Gray, Dark Gray, Black and White. Core Graphite remains the primary wordmark color.
-- Shadow includes every source Background value. This keeps material shadows and the classic chromatic shadows even when their Foreground values are not selected.
+The current JSON uses format 2. It removes game formatting identifiers, source names and excluded base colors from the consumer palette. It records the earlier reviewed revision and palette hash for traceability. Selection and naming are design decisions. The original 45 selected Hex values have not changed.
 
-The selection has 16 Foreground values and 30 Background values. Black occurs in both columns, so there are 45 distinct selected colors. Thirteen source Foreground values are excluded from the selected palette and retained only in JSON for traceability. These are the classic chromatic foregrounds and Minecoin Gold. The choice favors the established identity over highly saturated classic accents. There is no numeric cutoff that proves perceived glare, comfort or preference.
+## RGB and contrast
 
-Gold has two source shadows. Java uses `#2A2A00` and Bedrock uses `#402A00`. Both are available, with an explicit edition suffix. A JSON Background edition of `unsplit` means the supplied row has one shadow value. It does not mean that every Minecraft edition supports the associated code.
+RGB is derived from Hex. Builder Green remains `#47A036` with RGB 71, 160, 54. Thinker Orange remains `#EB7114` with RGB 235, 113, 20. The JSON retains the two supplied RGB/Hex conflicts by VINASIG identity ID.
 
-## Source RGB conflicts
+Use Core Graphite on Paper or Porcelain for general text. Scout Blue on Paper passes normal text contrast. White text on Thinker Orange or Builder Green fails that threshold, while Ink text on those solid fills passes. Check every actual context rather than assigning text color from a hue name.
 
-The owner-supplied table has two inconsistent Foreground RGB/Hex pairs. Hex is authoritative for this reconstruction because it matches the current artwork.
+The [contrast table](palette-reference.md#base-and-deep-contrast) follows the W3C sRGB formula. Normal text needs at least 4.5 to 1. Decisions use the unrounded result. See [WCAG text contrast](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) and [non-text contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html).
 
-| Source        | Submitted RGB | Retained Hex | RGB derived from Hex |
-| ------------- | ------------- | ------------ | -------------------- |
-| Emerald, `§q` | 17, 160, 54   | `#47A036`    | 71, 160, 54          |
-| Resin, `§v`   | 235, 114, 20  | `#EB7114`    | 235, 113, 20         |
+## Rebuild and preserve
 
-These differences are preserved in `sourceConflicts` rather than silently copied into exports. We have not inspected game binaries or certified which RGB tuple a current game version implements. The [source table](https://minecraft.fandom.com/wiki/Formatting_codes#Color_codes) is cited for color values and names, not for VINASIG endorsement or identity rights.
+`npm run build:palette` regenerates the SVG and Markdown from the canonical JSON. It never accepts catalog changes. An authorized data or export change needs a separately reviewed catalog update. `npm run check:palette` rejects a mismatched export. Archive checks continue to protect all original files and historical evidence.
 
-## Text and surface choices
-
-The [reference](palette-reference.md#matched-source-pair-contrast) reports contrast for every selected Foreground with its source Background. Several fail normal-text contrast, including the dark identity colors. Those values remain useful as color primitives. A FAIL is a restriction on that text pair, not a broken color.
-
-Use Core Graphite on White or Quartz Surface for general text. Use Scout Blue on White or Quartz Surface for a link or primary action. On the Core Graphite shadow `#110E0E`, White or Quartz Surface can supply general text. The brighter identity accents can be suitable on that dark surface, but Auditor Red needs a different text treatment. Orange or Green text on White does not meet normal-text AA. White text on Orange or Green fails the same threshold. Black is a passing text choice on those solid color fills.
-
-The implementation follows the W3C sRGB luminance and contrast formula. Normal text requires at least 4.5 to 1, while large text has a 3 to 1 minimum. Required non-text visual boundaries have a separate 3 to 1 requirement. Decisions use unrounded results, not the truncated displayed ratio. See [WCAG text contrast](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) and [non-text contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html).
-
-These measurements evaluate solid sRGB color pairs. They do not certify a whole interface, a logo, print output, gradients, transparency, antialiasing, color-vision usability or perceived glare. Pair colors with text or shapes when they convey meaning. Semantic interface tokens and actual theme integrations belong in the [Web Design System](https://github.com/VINASIG/web-design-system).
-
-## Rebuild and verify
-
-Use the pinned toolchain and run `npm run build:palette` to regenerate the SVG and Markdown reference. It never updates catalog digests. Review the new output and explicitly record only authorized new export digests. `npm run check:palette` rejects an export that differs from its JSON source. `npm run check` also checks the catalog, all unchanged originals and the preserved evidence.
-
-The SVG contains literal colors and no scripts, external resources or embedded font software. Text requests Space Grotesk with an Arial fallback. Available fonts can affect text rendering, but not the color values or deterministic SVG bytes. The generated Markdown uses the already pinned Prettier version. The [audit record](audits/palette-2026-10-08.md) describes scope, evidence and rights.
+The SVG contains literal colors without scripts, external resources or embedded font software. Its text requests Space Grotesk. Existing brand rights and font notices remain separate. The earlier research audit is historical evidence, while current product naming follows the owner's shared-palette instruction of 8 October 2026.

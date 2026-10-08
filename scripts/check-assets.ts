@@ -291,7 +291,7 @@ export async function verifyAssets(
       );
     } else if (format === "json") {
       assert.equal(relative, "assets/palette.json", "Unexpected JSON asset");
-      assert.equal(record(parseJson(bytes))["format"], 1);
+      assert.equal(record(parseJson(bytes))["format"], 2);
     } else if (format === "ttf") {
       assert.deepEqual(
         entry["font"],

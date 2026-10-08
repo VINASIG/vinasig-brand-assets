@@ -24,7 +24,7 @@ const copy = {
   vi: {
     title: "Bảng màu VINASIG",
     description:
-      "Bảng màu nhận diện VINASIG, gồm màu chính, màu bổ trợ, màu trung tính và màu bóng chữ từ bảng nguồn Minecraft.",
+      "Bảng màu nhận diện VINASIG, gồm màu chính, màu bổ trợ, màu trung tính và các sắc độ đậm.",
     intro:
       "Mã màu chính xác cho nhận diện VINASIG. Chọn một ô màu để sao chép mã Hex, hoặc tải bảng màu để dùng trong dự án của bạn.",
     home: "Trang chủ VINASIG",
@@ -35,33 +35,30 @@ const copy = {
     identity: "Màu nhận diện",
     support: "Màu bổ trợ",
     neutral: "Màu trung tính",
-    shadow: "Màu bóng chữ",
+    deep: "Màu đậm",
     guide: "Cách sử dụng",
     identityDescription:
       "Năm màu gắn với biểu tượng và tên VINASIG. Các mã màu này giữ nguyên theo tài sản gốc.",
     supportDescription:
       "Các màu mở rộng để dùng khi cần thêm sắc thái bên cạnh màu nhận diện.",
-    neutralDescription: "Các màu sáng, xám, đen và trắng trong bảng nguồn.",
-    shadowDescription:
-      "Các màu Background còn lại của bảng nguồn. Hai phiên bản Minecraft có màu bóng khác nhau cho Gold.",
-    foreground: "Foreground",
-    background: "Background",
+    neutralDescription: "Các màu sáng và tối để phối với màu nhận diện.",
+    deepDescription: "Các sắc độ đậm để lựa chọn theo ngữ cảnh sử dụng.",
+    foreground: "Màu gốc",
+    background: "Màu đậm",
     copy: "Sao chép mã",
     rgb: "RGB",
     downloadJson: "Tải dữ liệu JSON",
     downloadSvg: "Tải bảng màu SVG",
     reference: "Xem bảng RGB đầy đủ",
-    note: "Background trong bảng nguồn Minecraft là màu bóng chữ. Đây là mã màu tham khảo, không phải màu nền mặc định cho website.",
+    note: "Bảng màu lấy cảm hứng từ Minecraft.",
     guideText:
-      "Chọn màu chữ và màu nền theo ngữ cảnh sử dụng. Không mặc định rằng một cặp Foreground và Background trong nguồn có đủ tương phản để đọc.",
+      "Chọn màu chữ và màu nền theo ngữ cảnh sử dụng. Hãy kiểm tra độ tương phản của cặp màu trước khi dùng.",
     contrast: "Độ tương phản",
     contrastText:
-      "Văn bản thông thường cần độ tương phản ít nhất 4.5 theo WCAG 2.2 AA. Ví dụ, chữ trắng trên Scout Blue đạt yêu cầu này. Scout Blue trên màu bóng của chính nó không đạt. Hãy kiểm tra cặp màu thực tế trước khi sử dụng.",
+      "Văn bản thông thường cần độ tương phản ít nhất 4.5 theo WCAG 2.2 AA. Ví dụ, chữ trắng trên Scout Blue đạt yêu cầu này. Scout Blue trên sắc độ đậm của chính nó không đạt. Hãy kiểm tra cặp màu thực tế trước khi sử dụng.",
     decisions: "Nguồn và lựa chọn",
     decisionsText:
-      "Bảng màu giữ 16 giá trị Foreground và toàn bộ 30 giá trị Background từ bảng được cung cấp. Tổng cộng có 45 mã Hex khác nhau. Foreground có sắc độ chói của nhóm màu cổ điển và Minecoin Gold không được chọn làm màu bổ trợ.",
-    conflicts:
-      "Hai dòng Emerald và Resin trong nguồn có RGB không khớp với Hex. Bảng này dùng Hex làm giá trị chuẩn và tính lại RGB từ Hex. Chi tiết được ghi trong dữ liệu JSON và tài liệu nghiên cứu.",
+      "Hai dự án Brand Assets và Web Design System dùng chung tên, mã Hex và token CSS. Bảng có 16 màu gốc, 30 sắc độ đậm và 45 mã Hex khác nhau.",
     research: "Đọc nguồn và tiêu chí lựa chọn",
     originals: "Tài sản gốc",
     originalsText:
@@ -90,7 +87,7 @@ const copy = {
   en: {
     title: "VINASIG color palette",
     description:
-      "The VINASIG identity palette, including primary colors, supporting colors, neutrals and text shadow colors from the Minecraft source table.",
+      "The VINASIG identity palette, including primary colors, supporting colors, neutrals and deep tones.",
     intro:
       "Exact colors for the VINASIG identity. Select a swatch to copy its Hex value, or download the palette for your project.",
     home: "VINASIG home",
@@ -101,34 +98,32 @@ const copy = {
     identity: "Identity colors",
     support: "Supporting colors",
     neutral: "Neutral colors",
-    shadow: "Text shadow colors",
+    deep: "Deep tones",
     guide: "Using the palette",
     identityDescription:
       "Five colors associated with the VINASIG symbol and wordmark. These values preserve the original artwork.",
     supportDescription:
       "Additional accents for contexts that need more colors alongside the identity palette.",
     neutralDescription:
-      "Light colors, grays, black and white from the source table.",
-    shadowDescription:
-      "The remaining Background values in the source table. Gold has different shadow values in the two Minecraft editions.",
-    foreground: "Foreground",
-    background: "Background",
+      "Light and dark neutrals to pair with the identity colors.",
+    deepDescription:
+      "Deep reference tones for contexts that need darker colors.",
+    foreground: "Base",
+    background: "Deep",
     copy: "Copy",
     rgb: "RGB",
     downloadJson: "Download JSON data",
     downloadSvg: "Download SVG palette",
     reference: "View the complete RGB tables",
-    note: "Background in the Minecraft source table means text shadow. These are reference colors, rather than default website backgrounds.",
+    note: "Palette inspired by Minecraft.",
     guideText:
-      "Choose text and background colors for their actual context. Do not assume a source Foreground and Background pair provides enough contrast for reading.",
+      "Choose text and background colors for their actual context. Check the contrast of each pair before using it.",
     contrast: "Contrast",
     contrastText:
       "Ordinary text needs a contrast ratio of at least 4.5 under WCAG 2.2 AA. White text on Scout Blue meets that threshold. Scout Blue on its own shadow color does not. Check the actual color pair before using it.",
     decisions: "Sources and selection",
     decisionsText:
-      "The palette retains 16 Foreground values and all 30 Background values from the supplied table. There are 45 distinct Hex values. Highly saturated classic Foreground colors and Minecoin Gold are not selected as supporting accents.",
-    conflicts:
-      "The Emerald and Resin source rows have RGB values that disagree with Hex. This palette treats Hex as authoritative and calculates RGB from it. The JSON data and research document both record these conflicts.",
+      "Brand Assets and Web Design System share names, Hex values and CSS tokens. The palette has 16 base colors, 30 deep tones and 45 distinct Hex values.",
     research: "Read the sources and selection criteria",
     originals: "Original assets",
     originalsText:
@@ -235,14 +230,18 @@ function colorCard(
   const backgrounds = color.backgrounds.map((background) =>
     swatch(
       background.hex,
-      `${c.background}${background.edition === "unsplit" ? "" : background.edition === "java" ? " Java" : " Bedrock"}`,
+      color.id === "amber-deep"
+        ? language === "vi"
+          ? background.nameVi
+          : background.name
+        : c.background,
       language,
     ),
   );
   const values = shadowsOnly
     ? backgrounds
-    : [swatch(color.foreground, c.foreground, language), ...backgrounds];
-  return `<article class="color-card"><h3>${escape(color.name)}</h3><p class="color-source"><code>${escape(color.code)} ${escape(color.sourceName)}</code></p>${values.length > 1 ? `<div class="swatch-row">${values.join("")}</div>` : values.join("")}</article>`;
+    : [swatch(color.foreground ?? "", c.foreground, language), ...backgrounds];
+  return `<article class="color-card" data-palette-id="${color.id}"><h3>${escape(language === "vi" ? color.nameVi : color.name)}</h3><p class="color-source"><code>${escape(color.token ?? color.backgrounds[0]?.token ?? "")}</code></p>${values.length > 1 ? `<div class="swatch-row">${values.join("")}</div>` : values.join("")}</article>`;
 }
 
 function palettePage(
@@ -251,26 +250,26 @@ function palettePage(
   colors: PaletteColor[],
 ): string {
   const c = copy[language];
-  const groups = ["identity", "support", "neutral", "shadow"] as const;
+  const groups = ["identity", "support", "neutral", "deep"] as const;
   const description = {
     identity: c.identityDescription,
     support: c.supportDescription,
     neutral: c.neutralDescription,
-    shadow: c.shadowDescription,
+    deep: c.deepDescription,
   };
   const sections = groups
     .map(
       (group) =>
-        `<section id="${group}" aria-labelledby="${group}-heading"><h2 id="${group}-heading">${c[group]}</h2><p class="section-description">${description[group]}</p><div class="color-grid${group === "shadow" ? " shadow-grid" : ""}">${colors
+        `<section id="${group}" aria-labelledby="${group}-heading"><h2 id="${group}-heading">${c[group]}</h2><p class="section-description">${description[group]}</p><div class="color-grid${group === "deep" ? " deep-grid" : ""}">${colors
           .filter((color) => color.group === group)
-          .map((color) => colorCard(color, language, group === "shadow"))
+          .map((color) => colorCard(color, language, group === "deep"))
           .join("")}</div></section>`,
     )
     .join("");
   return shell(
     language,
     revision,
-    `<h1>${c.title}</h1><p class="intro">${c.intro}</p><div class="links"><a href="${siteBase}downloads/palette.json" download>${c.downloadJson}</a><a href="${siteBase}downloads/palette.svg" download>${c.downloadSvg}</a><a href="${repository}/blob/${revision}/docs/palette-reference.md">${c.reference}</a></div><nav class="section-nav" aria-label="${c.nav}">${[...groups, "guide" as const].map((group) => `<a href="#${group}">${c[group]}</a>`).join("")}</nav><p class="copy-status" role="status" data-copy-status></p><p class="note">${c.note}</p>${sections}<section class="guide" id="guide" aria-labelledby="guide-heading"><h2 id="guide-heading">${c.guide}</h2><p>${c.guideText}</p><h3>${c.contrast}</h3><p>${c.contrastText}</p><h3>${c.decisions}</h3><p>${c.decisionsText}</p><p>${c.conflicts}</p><div class="links"><a href="${repository}/blob/${revision}/docs/colors.md">${c.research}</a></div><h3>${c.originals}</h3><p>${c.originalsText}</p><div class="links"><a href="${repository}/blob/${revision}/docs/assets.md">${c.assets}</a><a href="${siteBase}licenses/BRAND_POLICY.md">${c.policy}</a></div></section>`,
+    `<h1>${c.title}</h1><p class="intro">${c.intro}</p><div class="links"><a href="${siteBase}downloads/palette.json" download>${c.downloadJson}</a><a href="${siteBase}downloads/palette.svg" download>${c.downloadSvg}</a><a href="${repository}/blob/${revision}/docs/palette-reference.md">${c.reference}</a></div><nav class="section-nav" aria-label="${c.nav}">${[...groups, "guide" as const].map((group) => `<a href="#${group}">${c[group]}</a>`).join("")}</nav><p class="copy-status" role="status" data-copy-status></p><p class="palette-credit">${c.note}</p>${sections}<section class="guide" id="guide" aria-labelledby="guide-heading"><h2 id="guide-heading">${c.guide}</h2><p>${c.guideText}</p><h3>${c.contrast}</h3><p>${c.contrastText}</p><h3>${c.decisions}</h3><p>${c.decisionsText}</p><div class="links"><a href="${repository}/blob/${revision}/docs/colors.md">${c.research}</a></div><h3>${c.originals}</h3><p>${c.originalsText}</p><div class="links"><a href="${repository}/blob/${revision}/docs/assets.md">${c.assets}</a><a href="${siteBase}licenses/BRAND_POLICY.md">${c.policy}</a></div></section>`,
   );
 }
 
@@ -359,7 +358,7 @@ export async function buildSite(
   const values = [
     ...new Set(
       palette.colors.flatMap((color) => [
-        ...(color.group === "shadow" ? [] : [color.foreground]),
+        ...(color.group === "deep" ? [] : [color.foreground ?? ""]),
         ...color.backgrounds.map((background) => background.hex),
       ]),
     ),

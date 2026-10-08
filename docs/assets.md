@@ -44,19 +44,19 @@ Contained PNGs and the 16 px favicon have an opaque white background. The primar
 
 ## Identity palette
 
-These identity colors are recorded in the preserved [logo story](../VINASIG_Logo_Story.md). The current palette adds source Background values and supporting colors without changing them. Read the [color guide](colors.md), [complete RGB and Hex tables](palette-reference.md) and [machine-readable palette](../assets/palette.json).
+These identity colors are recorded in the preserved [logo story](../VINASIG_Logo_Story.md). The current palette adds deep tones and supporting colors without changing them. Read the [color guide](colors.md), [complete RGB and Hex tables](palette-reference.md) and [machine-readable palette](../assets/palette.json).
 
-| Name           | Foreground | Source Background | Identity role                           |
-| -------------- | ---------- | ----------------- | --------------------------------------- |
-| Scout Blue     | `#21497B`  | `#08121E`         | Observe                                 |
-| Thinker Orange | `#EB7114`  | `#3B1D05`         | Reason                                  |
-| Builder Green  | `#47A036`  | `#04280D`         | Act                                     |
-| Auditor Red    | `#971607`  | `#250501`         | Evaluate                                |
-| Core Graphite  | `#443A3B`  | `#110E0E`         | Primary wordmark                        |
-| Black          | `#000000`  | `#000000`         | Black monochrome applications           |
-| White          | `#FFFFFF`  | `#3F3F3F`         | White artwork and reversed applications |
+| Name           | Base      | Deep tone | Identity role                           |
+| -------------- | --------- | --------- | --------------------------------------- |
+| Scout Blue     | `#21497B` | `#08121E` | Observe                                 |
+| Thinker Orange | `#EB7114` | `#3B1D05` | Reason                                  |
+| Builder Green  | `#47A036` | `#04280D` | Act                                     |
+| Auditor Red    | `#971607` | `#250501` | Evaluate                                |
+| Core Graphite  | `#443A3B` | `#110E0E` | Primary wordmark                        |
+| Ink            | `#000000` | `#000000` | Black monochrome applications           |
+| Paper          | `#FFFFFF` | `#3F3F3F` | White artwork and reversed applications |
 
-Background in the source table means text shadow. These are palette primitives, not an accessibility guarantee for text or controls. The [reference](palette-reference.md#matched-source-pair-contrast) includes measured contrast and failed source pairs. Use the [Web Design System](https://github.com/VINASIG/web-design-system) for semantic UI tokens and actual theme integrations.
+Deep tones are palette primitives, not an accessibility guarantee for text or controls. The [reference](palette-reference.md#base-and-deep-contrast) includes measured contrast and failed source pairs. Use the [Web Design System](https://github.com/VINASIG/web-design-system) for semantic UI tokens and actual theme integrations.
 
 ## Space Grotesk
 

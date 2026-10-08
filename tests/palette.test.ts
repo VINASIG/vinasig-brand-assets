@@ -37,8 +37,10 @@ await test("the expanded palette and both deterministic exports agree", async ()
   const svg = renderPalette(palette);
   assert(!svg.includes("#55FF55"));
   assert(svg.includes('fill="#153F15"'));
-  assert(svg.includes("Gold Shadow - Java"));
-  assert(svg.includes("Gold Shadow - Bedrock"));
+  assert(svg.includes("Amber Olive Deep"));
+  assert(svg.includes("Amber Umber Deep"));
+  assert(!svg.includes(String.fromCodePoint(167)));
+  assert(!/material_|Minecoin|Java|Bedrock/.test(svg));
 });
 
 await test("conflicting source RGB is resolved from the preserved identity Hex", () => {
@@ -81,21 +83,18 @@ await test("a retained identity color cannot be silently changed", async () => {
   );
 });
 
-await test("all source codes and both edition-specific Gold shadows are required", async () => {
+await test("all palette IDs and both Amber deep tones are required", async () => {
   const document = await data();
   const colors = colorRecords(document);
-  const gold = colors.find((color) => color["code"] === "§6");
+  const gold = colors.find((color) => color["id"] === "amber-deep");
   assert(gold);
-  gold["backgrounds"] = [{ edition: "unsplit", hex: "#2A2A00" }];
-  assert.throws(() => parsePalette(document), /Background edition/);
-  gold["backgrounds"] = [
-    { edition: "java", hex: "#2A2A00" },
-    { edition: "bedrock", hex: "#402A00" },
-  ];
-  const first = colors[0];
-  assert(first);
-  first["code"] = "§v";
-  assert.throws(() => parsePalette(document), /source code/);
+  const originalTones = gold["backgrounds"];
+  assert(Array.isArray(originalTones));
+  gold["backgrounds"] = originalTones.slice(0, 1);
+  assert.throws(() => parsePalette(document), /deep tone/);
+  gold["backgrounds"] = originalTones;
+  document["colors"] = colors.slice(0, -1);
+  assert.throws(() => parsePalette(document), /palette ID/);
 });
 
 await test("incorrect RGB correction metadata is rejected", async () => {

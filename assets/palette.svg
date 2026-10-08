@@ -1,121 +1,91 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1376" viewBox="0 0 1120 1376" role="img" aria-labelledby="title description">
 <title id="title">VINASIG color palette</title>
-<desc id="description">Five preserved identity colors, supporting colors and neutrals with their Minecraft Background shadow values. Additional shadows retain both Gold edition variants. The paired swatches show provenance, not approved text/background combinations.</desc>
+<desc id="description">Five preserved identity colors, supporting colors, neutrals and deep tones. Paired swatches are color references, not approved text and background combinations.</desc>
 <rect width="1120" height="1376" fill="#FFFFFF"/>
 <g font-family="Space Grotesk, Arial, sans-serif" fill="#443A3B">
 <text x="32" y="49" font-size="32" font-weight="700">VINASIG color palette</text>
-<text x="32" y="80" font-size="17">Upper swatch is Foreground. Lower swatch is Background, the source text-shadow color.</text>
+<text x="32" y="80" font-size="17">Upper swatch is Base. Lower swatch is Deep.</text>
 <text x="32" y="125" font-size="22" font-weight="700">Identity colors</text>
 <text x="32" y="159" font-size="17" font-weight="700">Scout Blue</text>
 <rect x="32" y="174" width="198" height="42" fill="#21497B" stroke="#CECACA" stroke-width="1"/><text x="131" y="201" fill="#FFFFFF" font-size="18" text-anchor="middle">#21497B</text>
 <rect x="32" y="222" width="198" height="42" fill="#08121E" stroke="#CECACA" stroke-width="1"/><text x="131" y="249" fill="#FFFFFF" font-size="18" text-anchor="middle">#08121E</text>
-<text x="32" y="290" font-size="16">§t</text>
 <text x="246" y="159" font-size="17" font-weight="700">Thinker Orange</text>
 <rect x="246" y="174" width="198" height="42" fill="#EB7114" stroke="#CECACA" stroke-width="1"/><text x="345" y="201" fill="#000000" font-size="18" text-anchor="middle">#EB7114</text>
 <rect x="246" y="222" width="198" height="42" fill="#3B1D05" stroke="#CECACA" stroke-width="1"/><text x="345" y="249" fill="#FFFFFF" font-size="18" text-anchor="middle">#3B1D05</text>
-<text x="246" y="290" font-size="16">§v</text>
 <text x="460" y="159" font-size="17" font-weight="700">Builder Green</text>
 <rect x="460" y="174" width="198" height="42" fill="#47A036" stroke="#CECACA" stroke-width="1"/><text x="559" y="201" fill="#000000" font-size="18" text-anchor="middle">#47A036</text>
 <rect x="460" y="222" width="198" height="42" fill="#04280D" stroke="#CECACA" stroke-width="1"/><text x="559" y="249" fill="#FFFFFF" font-size="18" text-anchor="middle">#04280D</text>
-<text x="460" y="290" font-size="16">§q</text>
 <text x="674" y="159" font-size="17" font-weight="700">Auditor Red</text>
 <rect x="674" y="174" width="198" height="42" fill="#971607" stroke="#CECACA" stroke-width="1"/><text x="773" y="201" fill="#FFFFFF" font-size="18" text-anchor="middle">#971607</text>
 <rect x="674" y="222" width="198" height="42" fill="#250501" stroke="#CECACA" stroke-width="1"/><text x="773" y="249" fill="#FFFFFF" font-size="18" text-anchor="middle">#250501</text>
-<text x="674" y="290" font-size="16">§m</text>
 <text x="888" y="159" font-size="17" font-weight="700">Core Graphite</text>
 <rect x="888" y="174" width="198" height="42" fill="#443A3B" stroke="#CECACA" stroke-width="1"/><text x="987" y="201" fill="#FFFFFF" font-size="18" text-anchor="middle">#443A3B</text>
 <rect x="888" y="222" width="198" height="42" fill="#110E0E" stroke="#CECACA" stroke-width="1"/><text x="987" y="249" fill="#FFFFFF" font-size="18" text-anchor="middle">#110E0E</text>
-<text x="888" y="290" font-size="16">§j</text>
 <text x="32" y="345" font-size="22" font-weight="700">Supporting colors</text>
-<text x="32" y="379" font-size="17" font-weight="700">Support Copper</text>
+<text x="32" y="379" font-size="17" font-weight="700">Clay</text>
 <rect x="32" y="394" width="198" height="42" fill="#B4684D" stroke="#CECACA" stroke-width="1"/><text x="131" y="421" fill="#000000" font-size="18" text-anchor="middle">#B4684D</text>
 <rect x="32" y="442" width="198" height="42" fill="#2D1A13" stroke="#CECACA" stroke-width="1"/><text x="131" y="469" fill="#FFFFFF" font-size="18" text-anchor="middle">#2D1A13</text>
-<text x="32" y="510" font-size="16">§n</text>
-<text x="246" y="379" font-size="17" font-weight="700">Support Amber</text>
+<text x="246" y="379" font-size="17" font-weight="700">Saffron</text>
 <rect x="246" y="394" width="198" height="42" fill="#DEB12D" stroke="#CECACA" stroke-width="1"/><text x="345" y="421" fill="#000000" font-size="18" text-anchor="middle">#DEB12D</text>
 <rect x="246" y="442" width="198" height="42" fill="#372C0B" stroke="#CECACA" stroke-width="1"/><text x="345" y="469" fill="#FFFFFF" font-size="18" text-anchor="middle">#372C0B</text>
-<text x="246" y="510" font-size="16">§p</text>
-<text x="460" y="379" font-size="17" font-weight="700">Support Teal</text>
+<text x="460" y="379" font-size="17" font-weight="700">Lagoon</text>
 <rect x="460" y="394" width="198" height="42" fill="#2CBAA8" stroke="#CECACA" stroke-width="1"/><text x="559" y="421" fill="#000000" font-size="18" text-anchor="middle">#2CBAA8</text>
 <rect x="460" y="442" width="198" height="42" fill="#0B2E2A" stroke="#CECACA" stroke-width="1"/><text x="559" y="469" fill="#FFFFFF" font-size="18" text-anchor="middle">#0B2E2A</text>
-<text x="460" y="510" font-size="16">§s</text>
-<text x="674" y="379" font-size="17" font-weight="700">Support Violet</text>
+<text x="674" y="379" font-size="17" font-weight="700">Violet</text>
 <rect x="674" y="394" width="198" height="42" fill="#9A5CC6" stroke="#CECACA" stroke-width="1"/><text x="773" y="421" fill="#000000" font-size="18" text-anchor="middle">#9A5CC6</text>
 <rect x="674" y="442" width="198" height="42" fill="#261731" stroke="#CECACA" stroke-width="1"/><text x="773" y="469" fill="#FFFFFF" font-size="18" text-anchor="middle">#261731</text>
-<text x="674" y="510" font-size="16">§u</text>
-<text x="888" y="379" font-size="17" font-weight="700">Soft Blue</text>
+<text x="888" y="379" font-size="17" font-weight="700">Sky</text>
 <rect x="888" y="394" width="198" height="42" fill="#8BB3FF" stroke="#CECACA" stroke-width="1"/><text x="987" y="421" fill="#000000" font-size="18" text-anchor="middle">#8BB3FF</text>
 <rect x="888" y="442" width="198" height="42" fill="#232D40" stroke="#CECACA" stroke-width="1"/><text x="987" y="469" fill="#FFFFFF" font-size="18" text-anchor="middle">#232D40</text>
-<text x="888" y="510" font-size="16">§w</text>
 <text x="32" y="565" font-size="22" font-weight="700">Neutral colors and surfaces</text>
-<text x="32" y="599" font-size="17" font-weight="700">Quartz Surface</text>
+<text x="32" y="599" font-size="17" font-weight="700">Porcelain</text>
 <rect x="32" y="614" width="162" height="42" fill="#E3D4D1" stroke="#CECACA" stroke-width="1"/><text x="113" y="641" fill="#000000" font-size="18" text-anchor="middle">#E3D4D1</text>
 <rect x="32" y="662" width="162" height="42" fill="#383534" stroke="#CECACA" stroke-width="1"/><text x="113" y="689" fill="#FFFFFF" font-size="18" text-anchor="middle">#383534</text>
-<text x="32" y="730" font-size="16">§h</text>
-<text x="210" y="599" font-size="17" font-weight="700">Iron Surface</text>
+<text x="210" y="599" font-size="17" font-weight="700">Fog</text>
 <rect x="210" y="614" width="162" height="42" fill="#CECACA" stroke="#CECACA" stroke-width="1"/><text x="291" y="641" fill="#000000" font-size="18" text-anchor="middle">#CECACA</text>
 <rect x="210" y="662" width="162" height="42" fill="#333232" stroke="#CECACA" stroke-width="1"/><text x="291" y="689" fill="#FFFFFF" font-size="18" text-anchor="middle">#333232</text>
-<text x="210" y="730" font-size="16">§i</text>
-<text x="388" y="599" font-size="17" font-weight="700">Gray</text>
+<text x="388" y="599" font-size="17" font-weight="700">Stone</text>
 <rect x="388" y="614" width="162" height="42" fill="#AAAAAA" stroke="#CECACA" stroke-width="1"/><text x="469" y="641" fill="#000000" font-size="18" text-anchor="middle">#AAAAAA</text>
 <rect x="388" y="662" width="162" height="42" fill="#2A2A2A" stroke="#CECACA" stroke-width="1"/><text x="469" y="689" fill="#FFFFFF" font-size="18" text-anchor="middle">#2A2A2A</text>
-<text x="388" y="730" font-size="16">§7</text>
-<text x="566" y="599" font-size="17" font-weight="700">Dark Gray</text>
+<text x="566" y="599" font-size="17" font-weight="700">Slate</text>
 <rect x="566" y="614" width="162" height="42" fill="#555555" stroke="#CECACA" stroke-width="1"/><text x="647" y="641" fill="#FFFFFF" font-size="18" text-anchor="middle">#555555</text>
 <rect x="566" y="662" width="162" height="42" fill="#151515" stroke="#CECACA" stroke-width="1"/><text x="647" y="689" fill="#FFFFFF" font-size="18" text-anchor="middle">#151515</text>
-<text x="566" y="730" font-size="16">§8</text>
-<text x="744" y="599" font-size="17" font-weight="700">Black</text>
+<text x="744" y="599" font-size="17" font-weight="700">Ink</text>
 <rect x="744" y="614" width="162" height="42" fill="#000000" stroke="#CECACA" stroke-width="1"/><text x="825" y="641" fill="#FFFFFF" font-size="18" text-anchor="middle">#000000</text>
 <rect x="744" y="662" width="162" height="42" fill="#000000" stroke="#CECACA" stroke-width="1"/><text x="825" y="689" fill="#FFFFFF" font-size="18" text-anchor="middle">#000000</text>
-<text x="744" y="730" font-size="16">§0</text>
-<text x="922" y="599" font-size="17" font-weight="700">White</text>
+<text x="922" y="599" font-size="17" font-weight="700">Paper</text>
 <rect x="922" y="614" width="162" height="42" fill="#FFFFFF" stroke="#CECACA" stroke-width="1"/><text x="1003" y="641" fill="#000000" font-size="18" text-anchor="middle">#FFFFFF</text>
 <rect x="922" y="662" width="162" height="42" fill="#3F3F3F" stroke="#CECACA" stroke-width="1"/><text x="1003" y="689" fill="#FFFFFF" font-size="18" text-anchor="middle">#3F3F3F</text>
-<text x="922" y="730" font-size="16">§f</text>
-<text x="32" y="785" font-size="22" font-weight="700">Additional Background colors</text>
-<text x="32" y="813" font-size="17">Their source Foreground colors are excluded from the selected palette.</text>
-<text x="32" y="853" font-size="17">Dark Blue Shadow</text>
+<text x="32" y="785" font-size="22" font-weight="700">Additional deep tones</text>
+<text x="32" y="813" font-size="17">Reference tones for contexts that need darker colors.</text>
+<text x="32" y="853" font-size="17">Indigo Deep</text>
 <rect x="32" y="866" width="252" height="42" fill="#00002A" stroke="#CECACA" stroke-width="1"/><text x="158" y="893" fill="#FFFFFF" font-size="18" text-anchor="middle">#00002A</text>
-<text x="32" y="930" font-size="15">§1</text>
-<text x="300" y="853" font-size="17">Dark Green Shadow</text>
+<text x="300" y="853" font-size="17">Forest Deep</text>
 <rect x="300" y="866" width="252" height="42" fill="#002A00" stroke="#CECACA" stroke-width="1"/><text x="426" y="893" fill="#FFFFFF" font-size="18" text-anchor="middle">#002A00</text>
-<text x="300" y="930" font-size="15">§2</text>
-<text x="568" y="853" font-size="17">Dark Aqua Shadow</text>
+<text x="568" y="853" font-size="17">Ocean Deep</text>
 <rect x="568" y="866" width="252" height="42" fill="#002A2A" stroke="#CECACA" stroke-width="1"/><text x="694" y="893" fill="#FFFFFF" font-size="18" text-anchor="middle">#002A2A</text>
-<text x="568" y="930" font-size="15">§3</text>
-<text x="836" y="853" font-size="17">Dark Red Shadow</text>
+<text x="836" y="853" font-size="17">Burgundy Deep</text>
 <rect x="836" y="866" width="252" height="42" fill="#2A0000" stroke="#CECACA" stroke-width="1"/><text x="962" y="893" fill="#FFFFFF" font-size="18" text-anchor="middle">#2A0000</text>
-<text x="836" y="930" font-size="15">§4</text>
-<text x="32" y="963" font-size="17">Dark Purple Shadow</text>
+<text x="32" y="963" font-size="17">Plum Deep</text>
 <rect x="32" y="976" width="252" height="42" fill="#2A002A" stroke="#CECACA" stroke-width="1"/><text x="158" y="1003" fill="#FFFFFF" font-size="18" text-anchor="middle">#2A002A</text>
-<text x="32" y="1040" font-size="15">§5</text>
-<text x="300" y="963" font-size="17">Gold Shadow - Java</text>
+<text x="300" y="963" font-size="17">Amber Olive Deep</text>
 <rect x="300" y="976" width="252" height="42" fill="#2A2A00" stroke="#CECACA" stroke-width="1"/><text x="426" y="1003" fill="#FFFFFF" font-size="18" text-anchor="middle">#2A2A00</text>
-<text x="300" y="1040" font-size="15">§6</text>
-<text x="568" y="963" font-size="17">Gold Shadow - Bedrock</text>
+<text x="568" y="963" font-size="17">Amber Umber Deep</text>
 <rect x="568" y="976" width="252" height="42" fill="#402A00" stroke="#CECACA" stroke-width="1"/><text x="694" y="1003" fill="#FFFFFF" font-size="18" text-anchor="middle">#402A00</text>
-<text x="568" y="1040" font-size="15">§6</text>
-<text x="836" y="963" font-size="17">Blue Shadow</text>
+<text x="836" y="963" font-size="17">Cobalt Deep</text>
 <rect x="836" y="976" width="252" height="42" fill="#15153F" stroke="#CECACA" stroke-width="1"/><text x="962" y="1003" fill="#FFFFFF" font-size="18" text-anchor="middle">#15153F</text>
-<text x="836" y="1040" font-size="15">§9</text>
-<text x="32" y="1073" font-size="17">Green Shadow</text>
+<text x="32" y="1073" font-size="17">Meadow Deep</text>
 <rect x="32" y="1086" width="252" height="42" fill="#153F15" stroke="#CECACA" stroke-width="1"/><text x="158" y="1113" fill="#FFFFFF" font-size="18" text-anchor="middle">#153F15</text>
-<text x="32" y="1150" font-size="15">§a</text>
-<text x="300" y="1073" font-size="17">Aqua Shadow</text>
+<text x="300" y="1073" font-size="17">Glacier Deep</text>
 <rect x="300" y="1086" width="252" height="42" fill="#153F3F" stroke="#CECACA" stroke-width="1"/><text x="426" y="1113" fill="#FFFFFF" font-size="18" text-anchor="middle">#153F3F</text>
-<text x="300" y="1150" font-size="15">§b</text>
-<text x="568" y="1073" font-size="17">Red Shadow</text>
+<text x="568" y="1073" font-size="17">Rose Deep</text>
 <rect x="568" y="1086" width="252" height="42" fill="#3F1515" stroke="#CECACA" stroke-width="1"/><text x="694" y="1113" fill="#FFFFFF" font-size="18" text-anchor="middle">#3F1515</text>
-<text x="568" y="1150" font-size="15">§c</text>
-<text x="836" y="1073" font-size="17">Light Purple Shadow</text>
+<text x="836" y="1073" font-size="17">Orchid Deep</text>
 <rect x="836" y="1086" width="252" height="42" fill="#3F153F" stroke="#CECACA" stroke-width="1"/><text x="962" y="1113" fill="#FFFFFF" font-size="18" text-anchor="middle">#3F153F</text>
-<text x="836" y="1150" font-size="15">§d</text>
-<text x="32" y="1183" font-size="17">Yellow Shadow</text>
+<text x="32" y="1183" font-size="17">Sunlight Deep</text>
 <rect x="32" y="1196" width="252" height="42" fill="#3F3F15" stroke="#CECACA" stroke-width="1"/><text x="158" y="1223" fill="#FFFFFF" font-size="18" text-anchor="middle">#3F3F15</text>
-<text x="32" y="1260" font-size="15">§e</text>
-<text x="300" y="1183" font-size="17">Minecoin Gold Shadow</text>
+<text x="300" y="1183" font-size="17">Citron Deep</text>
 <rect x="300" y="1196" width="252" height="42" fill="#373501" stroke="#CECACA" stroke-width="1"/><text x="426" y="1223" fill="#FFFFFF" font-size="18" text-anchor="middle">#373501</text>
-<text x="300" y="1260" font-size="15">§g</text>
-<text x="32" y="1336" font-size="17">16 selected Foreground values, 30 Background values, 45 distinct sRGB colors.</text>
+<text x="32" y="1336" font-size="17">16 base colors, 30 deep tones, 45 distinct sRGB colors.</text>
 <text x="32" y="1361" font-size="15">Reviewed 2026-10-08. See docs/colors.md for source decisions and text contrast.</text>
 </g></svg>

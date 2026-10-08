@@ -1,5 +1,13 @@
 # Changelog
 
+## 8 October 2026 - Shared VINASIG palette
+
+- Make the format-2 palette the canonical names, Hex values, Vietnamese names and CSS tokens for Brand Assets and Web Design System.
+- Preserve the selected 45 Hex values and five identity anchors. Include 16 base colors and all 30 reviewed deep tones.
+- Use VINASIG names in current JSON, SVG, references and localized pages, with one small inspiration credit. Remove source formatting identifiers and edition labels from consumer exports.
+- Pin the Design System's exact data copy to a reviewed source revision and hash, generate its palette CSS, and check rendered swatches against canonical values.
+- Update only the two current palette catalog records. Preserve original artwork, fonts, historical records, tags and releases.
+
 ## 8 October 2026 - GitHub Pages palette website
 
 - Add a static Vietnamese/English palette viewer with exact Hex copying and byte-identical JSON/SVG downloads.

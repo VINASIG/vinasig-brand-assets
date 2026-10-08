@@ -4,7 +4,7 @@ The public reference archive for the VINASIG Logo System 1.0, its color palette,
 
 <img src="01_Logos/Contained%20Mark/Exports/VINASIG%20Contained%20Brand%20Mark%20-%2040x%20-%201080x1080.png" alt="VINASIG contained mark" width="160" height="160">
 
-Open the [palette website](https://vinasig.github.io/vinasig-brand-assets/) to browse the Foreground and Background values, copy Hex colors and download the reviewed JSON or SVG. [English](https://vinasig.github.io/vinasig-brand-assets/en/) is independently accessible. The original assets and their rights remain in this archive.
+Open the [palette website](https://vinasig.github.io/vinasig-brand-assets/) to browse the base colors and deep tones, copy Hex colors and download the reviewed JSON or SVG. [English](https://vinasig.github.io/vinasig-brand-assets/en/) is independently accessible. The original assets and their rights remain in this archive.
 
 ## Choose an asset
 
@@ -22,11 +22,11 @@ See [asset selection and integration](docs/assets.md) for monochrome variants, d
 
 ## Color palette
 
-![VINASIG Foreground and Background palette](assets/palette.svg)
+![VINASIG base colors and deep tones](assets/palette.svg)
 
-The [current color guide](docs/colors.md) includes the five preserved identity colors, supporting colors, lighter neutrals and the Minecraft table's Background shadow values. There are 16 selected Foreground values, 30 Background values and 45 distinct selected colors. Highly saturated classic Foreground colors and Minecoin Gold remain source references rather than selected accents.
+The [current color guide](docs/colors.md) defines the shared VINASIG palette with five preserved identity anchors, supporting accents, neutrals and deep tones. There are 16 base colors, 30 deep tones and 45 distinct Hex values. Web Design System adopts the same names, Hex values and CSS tokens from a pinned copy of this data.
 
-Use [palette.json](assets/palette.json) for exact values and source decisions, or the [Hex and RGB reference](docs/palette-reference.md) for copyable tables. A source Foreground/Background pair is not automatically an accessible text pair. The guide records failed pairs and the two RGB/Hex conflicts in the supplied source.
+Use [palette.json](assets/palette.json) for exact values and source decisions, or the [Hex and RGB reference](docs/palette-reference.md) for copyable tables. A base/deep pair is not automatically an accessible text pair. The guide records measured contrast and the two retained RGB/Hex corrections.
 
 ## Rights and notices
 

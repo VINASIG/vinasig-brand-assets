@@ -4,7 +4,7 @@ The owner requested GitHub Pages deployment on 8 October 2026 after the palette 
 
 ## Implementation
 
-`scripts/build-site.ts` pre-renders Vietnamese and English palette/license pages from the validated `assets/palette.json`. It copies reviewed original exports and notices into ignored `dist/`. It publishes selected Foreground values and every source Background value, including both Gold shadows. The original JSON and SVG downloads remain byte-identical to the catalogued source.
+`scripts/build-site.ts` pre-renders Vietnamese and English palette/license pages from the validated `assets/palette.json`. It copies reviewed original exports and notices into ignored `dist/`. It publishes selected base colors and every reviewed deep tone, including Amber Olive Deep and Amber Umber Deep. The original JSON and SVG downloads remain byte-identical to the catalogued source.
 
 Copy buttons write only their exact Hex value to the clipboard after an explicit action. Unavailable or denied clipboard access produces an inline message. The Hex text remains readable without JavaScript. There are no forms, accounts, runtime packages, remote font/script services, analytics or content collection. A meta Content Security Policy restricts script, style, image and font loading to the current origin and blocks connections. GitHub Pages manages response headers. This site does not claim arbitrary HTTP security header control.
 

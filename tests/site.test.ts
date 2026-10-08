@@ -64,6 +64,9 @@ await test("the static build preserves source bytes, uses the repository base an
     assert.equal((html.match(/data-copy-hex=/g) ?? []).length, 46);
     assert.equal((html.match(/data-site-header/g) ?? []).length, 1);
     assert.equal((html.match(/data-site-footer/g) ?? []).length, 1);
+    assert(!html.includes(String.fromCodePoint(167)));
+    assert(!/material_|Minecoin|Java|Bedrock/.test(html));
+    assert.equal((html.match(/Minecraft/g) ?? []).length, 1);
     assert(!html.includes("http://") && !html.includes("localhost"));
     assert(
       !html.includes("99_Evidence/") && !html.includes("Source%20Canvases"),

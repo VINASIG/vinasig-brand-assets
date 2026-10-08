@@ -640,8 +640,8 @@
       "path": "assets/palette.json",
       "kind": "palette-source",
       "format": "json",
-      "bytes": 9256,
-      "sha256": "069b4b4bfb3c7cc131026f1cc122596ca47dbe4536cc99428f91968512d10002",
+      "bytes": 13095,
+      "sha256": "52a35f188a5c0fa989347d767f720dea174616017c73c07699ad3539e9adf87a",
       "rights": "VINASIG-reserved"
     },
     {
@@ -649,8 +649,8 @@
       "path": "assets/palette.svg",
       "kind": "palette-export",
       "format": "svg",
-      "bytes": 13434,
-      "sha256": "20faf597dcb951898e4faeb0e8f53b412392ffcb884f5f38bb83342f6a8b4744",
+      "bytes": 11712,
+      "sha256": "cac6ffbc1f29a5c7c5536fed831621c056adf621751100dc746ab178c240c904",
       "rights": "VINASIG-reserved",
       "viewBox": [0, 0, 1120, 1376],
       "generatedFrom": {

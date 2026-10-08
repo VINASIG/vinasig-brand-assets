@@ -1,38 +1,35 @@
 {
-  "format": 1,
+  "format": 2,
   "name": "VINASIG color palette",
   "reviewedOn": "2026-10-08",
   "source": {
+    "inspiration": "Palette inspired by Minecraft.",
     "url": "https://minecraft.fandom.com/wiki/Formatting_codes#Color_codes",
-    "basis": "HTML color table supplied by the owner on 8 October 2026",
     "submittedHtmlSha256": "99501924cf350fa9ab940b44fbdda0f959788d74cb94a29f9271675adb285f10",
-    "foregroundMeaning": "Minecraft text color",
-    "backgroundMeaning": "Minecraft text-shadow color",
-    "authority": "Hex values in the supplied table, with existing VINASIG identity Hex values preserved"
+    "previousRevision": "5fc143f20ac758a2584fa9d59482526456c78efb",
+    "previousPaletteSha256": "069b4b4bfb3c7cc131026f1cc122596ca47dbe4536cc99428f91968512d10002"
   },
   "selection": {
-    "basis": "Owner-requested palette reconstruction, retaining the identity colors and selecting restrained supporting colors",
-    "foreground": "The material colors, Soft Blue, black, white and the two neutral grays",
-    "background": "Every Background value in the supplied table, including both edition-specific Gold values",
-    "excludedForeground": "Classic chromatic foregrounds and Minecoin Gold remain source references. Their shadows are available. Brightness exclusion is a design judgment, not a measured glare threshold.",
-    "usage": "Palette primitives are not semantic UI tokens. A source foreground and its shadow are not automatically an approved text/background combination."
+    "basis": "Owner-approved shared palette for Brand Assets and Web Design System",
+    "foreground": "Five unchanged identity anchors, five supporting accents and six neutrals",
+    "background": "Thirty deep tones with their own VINASIG names and CSS tokens",
+    "excludedForeground": "Highly saturated accents remain outside the selected palette",
+    "usage": "Color primitives do not replace contrast-tested semantic UI tokens"
   },
   "sourceConflicts": [
     {
-      "code": "§q",
-      "name": "material_emerald",
+      "id": "builder-green",
       "submittedForegroundRgb": [17, 160, 54],
       "foregroundHex": "#47A036",
       "resolvedForegroundRgb": [71, 160, 54],
-      "reason": "Retain the supplied Hex and the existing Builder Green artwork. Derive exported RGB from Hex."
+      "reason": "Preserve the identity Hex and derive RGB from it."
     },
     {
-      "code": "§v",
-      "name": "material_resin",
+      "id": "thinker-orange",
       "submittedForegroundRgb": [235, 114, 20],
       "foregroundHex": "#EB7114",
       "resolvedForegroundRgb": [235, 113, 20],
-      "reason": "Retain the supplied Hex and the existing Thinker Orange artwork. Derive exported RGB from Hex."
+      "reason": "Preserve the identity Hex and derive RGB from it."
     }
   ],
   "colors": [
@@ -40,265 +37,475 @@
       "id": "scout-blue",
       "name": "Scout Blue",
       "group": "identity",
-      "code": "§t",
-      "sourceName": "material_lapis",
       "foreground": "#21497B",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#08121E" }]
+      "token": "--color-scout-blue",
+      "backgrounds": [
+        {
+          "id": "scout-blue-deep",
+          "name": "Scout Blue Deep",
+          "token": "--color-scout-blue-deep",
+          "hex": "#08121E",
+          "nameVi": "Scout Blue đậm"
+        }
+      ],
+      "nameVi": "Scout Blue"
     },
     {
       "id": "thinker-orange",
       "name": "Thinker Orange",
       "group": "identity",
-      "code": "§v",
-      "sourceName": "material_resin",
       "foreground": "#EB7114",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#3B1D05" }]
+      "token": "--color-thinker-orange",
+      "backgrounds": [
+        {
+          "id": "thinker-orange-deep",
+          "name": "Thinker Orange Deep",
+          "token": "--color-thinker-orange-deep",
+          "hex": "#3B1D05",
+          "nameVi": "Thinker Orange đậm"
+        }
+      ],
+      "nameVi": "Thinker Orange"
     },
     {
       "id": "builder-green",
       "name": "Builder Green",
       "group": "identity",
-      "code": "§q",
-      "sourceName": "material_emerald",
       "foreground": "#47A036",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#04280D" }]
+      "token": "--color-builder-green",
+      "backgrounds": [
+        {
+          "id": "builder-green-deep",
+          "name": "Builder Green Deep",
+          "token": "--color-builder-green-deep",
+          "hex": "#04280D",
+          "nameVi": "Builder Green đậm"
+        }
+      ],
+      "nameVi": "Builder Green"
     },
     {
       "id": "auditor-red",
       "name": "Auditor Red",
       "group": "identity",
-      "code": "§m",
-      "sourceName": "material_redstone",
       "foreground": "#971607",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#250501" }]
+      "token": "--color-auditor-red",
+      "backgrounds": [
+        {
+          "id": "auditor-red-deep",
+          "name": "Auditor Red Deep",
+          "token": "--color-auditor-red-deep",
+          "hex": "#250501",
+          "nameVi": "Auditor Red đậm"
+        }
+      ],
+      "nameVi": "Auditor Red"
     },
     {
       "id": "core-graphite",
       "name": "Core Graphite",
       "group": "identity",
-      "code": "§j",
-      "sourceName": "material_netherite",
       "foreground": "#443A3B",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#110E0E" }]
-    },
-    {
-      "id": "support-copper",
-      "name": "Support Copper",
-      "group": "support",
-      "code": "§n",
-      "sourceName": "material_copper",
-      "foreground": "#B4684D",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#2D1A13" }]
-    },
-    {
-      "id": "support-amber",
-      "name": "Support Amber",
-      "group": "support",
-      "code": "§p",
-      "sourceName": "material_gold",
-      "foreground": "#DEB12D",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#372C0B" }]
-    },
-    {
-      "id": "support-teal",
-      "name": "Support Teal",
-      "group": "support",
-      "code": "§s",
-      "sourceName": "material_diamond",
-      "foreground": "#2CBAA8",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#0B2E2A" }]
-    },
-    {
-      "id": "support-violet",
-      "name": "Support Violet",
-      "group": "support",
-      "code": "§u",
-      "sourceName": "material_amethyst",
-      "foreground": "#9A5CC6",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#261731" }]
-    },
-    {
-      "id": "soft-blue",
-      "name": "Soft Blue",
-      "group": "support",
-      "code": "§w",
-      "sourceName": "light_blue",
-      "foreground": "#8BB3FF",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#232D40" }]
-    },
-    {
-      "id": "quartz-surface",
-      "name": "Quartz Surface",
-      "group": "neutral",
-      "code": "§h",
-      "sourceName": "material_quartz",
-      "foreground": "#E3D4D1",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#383534" }]
-    },
-    {
-      "id": "iron-surface",
-      "name": "Iron Surface",
-      "group": "neutral",
-      "code": "§i",
-      "sourceName": "material_iron",
-      "foreground": "#CECACA",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#333232" }]
-    },
-    {
-      "id": "gray",
-      "name": "Gray",
-      "group": "neutral",
-      "code": "§7",
-      "sourceName": "gray",
-      "foreground": "#AAAAAA",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#2A2A2A" }]
-    },
-    {
-      "id": "dark-gray",
-      "name": "Dark Gray",
-      "group": "neutral",
-      "code": "§8",
-      "sourceName": "dark_gray",
-      "foreground": "#555555",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#151515" }]
-    },
-    {
-      "id": "black",
-      "name": "Black",
-      "group": "neutral",
-      "code": "§0",
-      "sourceName": "black",
-      "foreground": "#000000",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#000000" }]
-    },
-    {
-      "id": "white",
-      "name": "White",
-      "group": "neutral",
-      "code": "§f",
-      "sourceName": "white",
-      "foreground": "#FFFFFF",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#3F3F3F" }]
-    },
-    {
-      "id": "classic-dark-blue",
-      "name": "Dark Blue Shadow",
-      "group": "shadow",
-      "code": "§1",
-      "sourceName": "dark_blue",
-      "foreground": "#0000AA",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#00002A" }]
-    },
-    {
-      "id": "classic-dark-green",
-      "name": "Dark Green Shadow",
-      "group": "shadow",
-      "code": "§2",
-      "sourceName": "dark_green",
-      "foreground": "#00AA00",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#002A00" }]
-    },
-    {
-      "id": "classic-dark-aqua",
-      "name": "Dark Aqua Shadow",
-      "group": "shadow",
-      "code": "§3",
-      "sourceName": "dark_aqua",
-      "foreground": "#00AAAA",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#002A2A" }]
-    },
-    {
-      "id": "classic-dark-red",
-      "name": "Dark Red Shadow",
-      "group": "shadow",
-      "code": "§4",
-      "sourceName": "dark_red",
-      "foreground": "#AA0000",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#2A0000" }]
-    },
-    {
-      "id": "classic-dark-purple",
-      "name": "Dark Purple Shadow",
-      "group": "shadow",
-      "code": "§5",
-      "sourceName": "dark_purple",
-      "foreground": "#AA00AA",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#2A002A" }]
-    },
-    {
-      "id": "classic-gold",
-      "name": "Gold Shadow",
-      "group": "shadow",
-      "code": "§6",
-      "sourceName": "gold",
-      "foreground": "#FFAA00",
+      "token": "--color-core-graphite",
       "backgrounds": [
-        { "edition": "java", "hex": "#2A2A00" },
-        { "edition": "bedrock", "hex": "#402A00" }
-      ]
+        {
+          "id": "core-graphite-deep",
+          "name": "Core Graphite Deep",
+          "token": "--color-core-graphite-deep",
+          "hex": "#110E0E",
+          "nameVi": "Core Graphite đậm"
+        }
+      ],
+      "nameVi": "Core Graphite"
     },
     {
-      "id": "classic-blue",
-      "name": "Blue Shadow",
-      "group": "shadow",
-      "code": "§9",
-      "sourceName": "blue",
-      "foreground": "#5555FF",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#15153F" }]
+      "id": "clay",
+      "name": "Clay",
+      "group": "support",
+      "foreground": "#B4684D",
+      "token": "--color-palette-clay",
+      "backgrounds": [
+        {
+          "id": "clay-deep",
+          "name": "Clay Deep",
+          "token": "--color-palette-clay-deep",
+          "hex": "#2D1A13",
+          "nameVi": "Đất sét đậm"
+        }
+      ],
+      "nameVi": "Đất sét"
     },
     {
-      "id": "classic-green",
-      "name": "Green Shadow",
-      "group": "shadow",
-      "code": "§a",
-      "sourceName": "green",
-      "foreground": "#55FF55",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#153F15" }]
+      "id": "saffron",
+      "name": "Saffron",
+      "group": "support",
+      "foreground": "#DEB12D",
+      "token": "--color-palette-saffron",
+      "backgrounds": [
+        {
+          "id": "saffron-deep",
+          "name": "Saffron Deep",
+          "token": "--color-palette-saffron-deep",
+          "hex": "#372C0B",
+          "nameVi": "Nghệ tây đậm"
+        }
+      ],
+      "nameVi": "Nghệ tây"
     },
     {
-      "id": "classic-aqua",
-      "name": "Aqua Shadow",
-      "group": "shadow",
-      "code": "§b",
-      "sourceName": "aqua",
-      "foreground": "#55FFFF",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#153F3F" }]
+      "id": "lagoon",
+      "name": "Lagoon",
+      "group": "support",
+      "foreground": "#2CBAA8",
+      "token": "--color-palette-lagoon",
+      "backgrounds": [
+        {
+          "id": "lagoon-deep",
+          "name": "Lagoon Deep",
+          "token": "--color-palette-lagoon-deep",
+          "hex": "#0B2E2A",
+          "nameVi": "Đầm xanh đậm"
+        }
+      ],
+      "nameVi": "Đầm xanh"
     },
     {
-      "id": "classic-red",
-      "name": "Red Shadow",
-      "group": "shadow",
-      "code": "§c",
-      "sourceName": "red",
-      "foreground": "#FF5555",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#3F1515" }]
+      "id": "violet",
+      "name": "Violet",
+      "group": "support",
+      "foreground": "#9A5CC6",
+      "token": "--color-palette-violet",
+      "backgrounds": [
+        {
+          "id": "violet-deep",
+          "name": "Violet Deep",
+          "token": "--color-palette-violet-deep",
+          "hex": "#261731",
+          "nameVi": "Tím đậm"
+        }
+      ],
+      "nameVi": "Tím"
     },
     {
-      "id": "classic-light-purple",
-      "name": "Light Purple Shadow",
-      "group": "shadow",
-      "code": "§d",
-      "sourceName": "light_purple",
-      "foreground": "#FF55FF",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#3F153F" }]
+      "id": "sky",
+      "name": "Sky",
+      "group": "support",
+      "foreground": "#8BB3FF",
+      "token": "--color-palette-sky",
+      "backgrounds": [
+        {
+          "id": "sky-deep",
+          "name": "Sky Deep",
+          "token": "--color-palette-sky-deep",
+          "hex": "#232D40",
+          "nameVi": "Xanh trời đậm"
+        }
+      ],
+      "nameVi": "Xanh trời"
     },
     {
-      "id": "classic-yellow",
-      "name": "Yellow Shadow",
-      "group": "shadow",
-      "code": "§e",
-      "sourceName": "yellow",
-      "foreground": "#FFFF55",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#3F3F15" }]
+      "id": "porcelain",
+      "name": "Porcelain",
+      "group": "neutral",
+      "foreground": "#E3D4D1",
+      "token": "--color-palette-porcelain",
+      "backgrounds": [
+        {
+          "id": "porcelain-deep",
+          "name": "Porcelain Deep",
+          "token": "--color-palette-porcelain-deep",
+          "hex": "#383534",
+          "nameVi": "Sứ đậm"
+        }
+      ],
+      "nameVi": "Sứ"
     },
     {
-      "id": "minecoin-gold",
-      "name": "Minecoin Gold Shadow",
-      "group": "shadow",
-      "code": "§g",
-      "sourceName": "minecoin_gold",
-      "foreground": "#DDD605",
-      "backgrounds": [{ "edition": "unsplit", "hex": "#373501" }]
+      "id": "fog",
+      "name": "Fog",
+      "group": "neutral",
+      "foreground": "#CECACA",
+      "token": "--color-palette-fog",
+      "backgrounds": [
+        {
+          "id": "fog-deep",
+          "name": "Fog Deep",
+          "token": "--color-palette-fog-deep",
+          "hex": "#333232",
+          "nameVi": "Sương đậm"
+        }
+      ],
+      "nameVi": "Sương"
+    },
+    {
+      "id": "stone",
+      "name": "Stone",
+      "group": "neutral",
+      "foreground": "#AAAAAA",
+      "token": "--color-palette-stone",
+      "backgrounds": [
+        {
+          "id": "stone-deep",
+          "name": "Stone Deep",
+          "token": "--color-palette-stone-deep",
+          "hex": "#2A2A2A",
+          "nameVi": "Đá đậm"
+        }
+      ],
+      "nameVi": "Đá"
+    },
+    {
+      "id": "slate",
+      "name": "Slate",
+      "group": "neutral",
+      "foreground": "#555555",
+      "token": "--color-palette-slate",
+      "backgrounds": [
+        {
+          "id": "slate-deep",
+          "name": "Slate Deep",
+          "token": "--color-palette-slate-deep",
+          "hex": "#151515",
+          "nameVi": "Đá phiến đậm"
+        }
+      ],
+      "nameVi": "Đá phiến"
+    },
+    {
+      "id": "ink",
+      "name": "Ink",
+      "group": "neutral",
+      "foreground": "#000000",
+      "token": "--color-palette-ink",
+      "backgrounds": [
+        {
+          "id": "ink-deep",
+          "name": "Ink Deep",
+          "token": "--color-palette-ink-deep",
+          "hex": "#000000",
+          "nameVi": "Mực đậm"
+        }
+      ],
+      "nameVi": "Mực"
+    },
+    {
+      "id": "paper",
+      "name": "Paper",
+      "group": "neutral",
+      "foreground": "#FFFFFF",
+      "token": "--color-palette-paper",
+      "backgrounds": [
+        {
+          "id": "paper-deep",
+          "name": "Paper Deep",
+          "token": "--color-palette-paper-deep",
+          "hex": "#3F3F3F",
+          "nameVi": "Giấy đậm"
+        }
+      ],
+      "nameVi": "Giấy"
+    },
+    {
+      "id": "indigo-deep",
+      "name": "Indigo Deep",
+      "group": "deep",
+      "backgrounds": [
+        {
+          "id": "indigo-deep",
+          "name": "Indigo Deep",
+          "token": "--color-palette-indigo-deep",
+          "hex": "#00002A",
+          "nameVi": "Chàm đậm"
+        }
+      ],
+      "nameVi": "Chàm đậm"
+    },
+    {
+      "id": "forest-deep",
+      "name": "Forest Deep",
+      "group": "deep",
+      "backgrounds": [
+        {
+          "id": "forest-deep",
+          "name": "Forest Deep",
+          "token": "--color-palette-forest-deep",
+          "hex": "#002A00",
+          "nameVi": "Rừng đậm"
+        }
+      ],
+      "nameVi": "Rừng đậm"
+    },
+    {
+      "id": "ocean-deep",
+      "name": "Ocean Deep",
+      "group": "deep",
+      "backgrounds": [
+        {
+          "id": "ocean-deep",
+          "name": "Ocean Deep",
+          "token": "--color-palette-ocean-deep",
+          "hex": "#002A2A",
+          "nameVi": "Đại dương đậm"
+        }
+      ],
+      "nameVi": "Đại dương đậm"
+    },
+    {
+      "id": "burgundy-deep",
+      "name": "Burgundy Deep",
+      "group": "deep",
+      "backgrounds": [
+        {
+          "id": "burgundy-deep",
+          "name": "Burgundy Deep",
+          "token": "--color-palette-burgundy-deep",
+          "hex": "#2A0000",
+          "nameVi": "Rượu vang đậm"
+        }
+      ],
+      "nameVi": "Rượu vang đậm"
+    },
+    {
+      "id": "plum-deep",
+      "name": "Plum Deep",
+      "group": "deep",
+      "backgrounds": [
+        {
+          "id": "plum-deep",
+          "name": "Plum Deep",
+          "token": "--color-palette-plum-deep",
+          "hex": "#2A002A",
+          "nameVi": "Mận đậm"
+        }
+      ],
+      "nameVi": "Mận đậm"
+    },
+    {
+      "id": "amber-deep",
+      "name": "Amber Deep",
+      "group": "deep",
+      "backgrounds": [
+        {
+          "id": "amber-olive-deep",
+          "name": "Amber Olive Deep",
+          "token": "--color-palette-amber-olive-deep",
+          "hex": "#2A2A00",
+          "nameVi": "Hổ phách ô liu đậm"
+        },
+        {
+          "id": "amber-umber-deep",
+          "name": "Amber Umber Deep",
+          "token": "--color-palette-amber-umber-deep",
+          "hex": "#402A00",
+          "nameVi": "Hổ phách nâu đậm"
+        }
+      ],
+      "nameVi": "Hổ phách đậm"
+    },
+    {
+      "id": "cobalt-deep",
+      "name": "Cobalt Deep",
+      "group": "deep",
+      "backgrounds": [
+        {
+          "id": "cobalt-deep",
+          "name": "Cobalt Deep",
+          "token": "--color-palette-cobalt-deep",
+          "hex": "#15153F",
+          "nameVi": "Coban đậm"
+        }
+      ],
+      "nameVi": "Coban đậm"
+    },
+    {
+      "id": "meadow-deep",
+      "name": "Meadow Deep",
+      "group": "deep",
+      "backgrounds": [
+        {
+          "id": "meadow-deep",
+          "name": "Meadow Deep",
+          "token": "--color-palette-meadow-deep",
+          "hex": "#153F15",
+          "nameVi": "Đồng cỏ đậm"
+        }
+      ],
+      "nameVi": "Đồng cỏ đậm"
+    },
+    {
+      "id": "glacier-deep",
+      "name": "Glacier Deep",
+      "group": "deep",
+      "backgrounds": [
+        {
+          "id": "glacier-deep",
+          "name": "Glacier Deep",
+          "token": "--color-palette-glacier-deep",
+          "hex": "#153F3F",
+          "nameVi": "Băng đậm"
+        }
+      ],
+      "nameVi": "Băng đậm"
+    },
+    {
+      "id": "rose-deep",
+      "name": "Rose Deep",
+      "group": "deep",
+      "backgrounds": [
+        {
+          "id": "rose-deep",
+          "name": "Rose Deep",
+          "token": "--color-palette-rose-deep",
+          "hex": "#3F1515",
+          "nameVi": "Hồng đậm"
+        }
+      ],
+      "nameVi": "Hồng đậm"
+    },
+    {
+      "id": "orchid-deep",
+      "name": "Orchid Deep",
+      "group": "deep",
+      "backgrounds": [
+        {
+          "id": "orchid-deep",
+          "name": "Orchid Deep",
+          "token": "--color-palette-orchid-deep",
+          "hex": "#3F153F",
+          "nameVi": "Lan đậm"
+        }
+      ],
+      "nameVi": "Lan đậm"
+    },
+    {
+      "id": "sunlight-deep",
+      "name": "Sunlight Deep",
+      "group": "deep",
+      "backgrounds": [
+        {
+          "id": "sunlight-deep",
+          "name": "Sunlight Deep",
+          "token": "--color-palette-sunlight-deep",
+          "hex": "#3F3F15",
+          "nameVi": "Nắng đậm"
+        }
+      ],
+      "nameVi": "Nắng đậm"
+    },
+    {
+      "id": "citron-deep",
+      "name": "Citron Deep",
+      "group": "deep",
+      "backgrounds": [
+        {
+          "id": "citron-deep",
+          "name": "Citron Deep",
+          "token": "--color-palette-citron-deep",
+          "hex": "#373501",
+          "nameVi": "Chanh đậm"
+        }
+      ],
+      "nameVi": "Chanh đậm"
     }
   ]
 }
