@@ -102,3 +102,7 @@ See [contributing](CONTRIBUTING.md) for archive changes and [security reporting]
 VINASIG-authored software uses **GPL-3.0-or-later**. Authored documentation uses **CC-BY-SA-4.0**. Commercial use is allowed under those standard licenses. Fonts and third-party components retain their original terms. Official VINASIG identity assets follow the separate brand policy.
 
 Read [LICENSE](LICENSE), [LICENSES.md](LICENSES.md), [VINASIG Brand Usage Policy](BRAND_POLICY.md) and [the licensing review](docs/audits/licensing-2026-10-04.md) for exact scopes, rationale and remaining review.
+
+## Shared appearance
+
+The interface uses the approved [VINASIG neutral theme](docs/THEME.md). Identity artwork and archived palette colors remain unchanged.

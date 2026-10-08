@@ -1,14 +1,14 @@
 {
   "format": 1,
   "repository": "VINASIG/web-design-system",
-  "revision": "37ed632e52d4b20fdd6c3a1e9bd2363a75ba4d58",
+  "revision": "06528b4b5dde7848998025b065fd1490bb541e69",
   "license": "AGPL-3.0-or-later",
   "files": {
-    "site/vendor/tokens.css": "9ba4e9fa436b29bd1274ef21690cc63d970c3919b6bbd54519a9c5bfd8695313",
+    "site/vendor/tokens.css": "213c8366477d6b8dad06b3a3aad3878b140aae02ef93ab4ef86ef7f03bfe639e",
     "site/vendor/palette.css": "fa4fbf43380e0b81594db16ba17bee2ce3cc94d626943347c23d5b8ba9d3c0c7",
-    "site/vendor/preferences.css": "144e7d6c837017fe38d86c24719a4264a747c5724d5cb3c894dca4f6753a3687",
+    "site/vendor/preferences.css": "2426e8ea7f181bfb4f11c159676b310ac062c1af31b8d02b928ef522014a84c2",
     "site/vendor/site-chrome.css": "0443593d2b4e9dbd5e9341e444a52d823900fd534e9b80edcbcddb6b54d0f2a3",
-    "site/vendor/control-surfaces.css": "3114cc613a3dfaabfb0c9458ca9384ae43da6ea1a9e9be0e502a07d3ed3a8808",
+    "site/vendor/control-surfaces.css": "84f70084cf8f7ff73fae48dcdae9f7cad6e6e9d9c96dd3705921a25118b5f27f",
     "site/vendor/shared-preferences.js": "af933a05e658b258e858ab6df46478bcabe5907aaa0d40bb8ae29a20dbddc729"
   }
 }

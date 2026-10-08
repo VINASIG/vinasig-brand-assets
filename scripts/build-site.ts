@@ -304,7 +304,7 @@ export async function buildSite(
   const sources = record(
     parseJson(await readFile(path.join(repositoryRoot, "site/sources.json"))),
   );
-  assert.equal(sources["revision"], "37ed632e52d4b20fdd6c3a1e9bd2363a75ba4d58");
+  assert.equal(sources["revision"], "06528b4b5dde7848998025b065fd1490bb541e69");
   for (const [file, hash] of Object.entries(record(sources["files"]))) {
     assert(/^site\/vendor\/[a-z-]+\.(css|js)$/.test(file));
     assert.equal(
