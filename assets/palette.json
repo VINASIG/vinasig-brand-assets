@@ -1,0 +1,304 @@
+{
+  "format": 1,
+  "name": "VINASIG color palette",
+  "reviewedOn": "2026-10-08",
+  "source": {
+    "url": "https://minecraft.fandom.com/wiki/Formatting_codes#Color_codes",
+    "basis": "HTML color table supplied by the owner on 8 October 2026",
+    "submittedHtmlSha256": "99501924cf350fa9ab940b44fbdda0f959788d74cb94a29f9271675adb285f10",
+    "foregroundMeaning": "Minecraft text color",
+    "backgroundMeaning": "Minecraft text-shadow color",
+    "authority": "Hex values in the supplied table, with existing VINASIG identity Hex values preserved"
+  },
+  "selection": {
+    "basis": "Owner-requested palette reconstruction, retaining the identity colors and selecting restrained supporting colors",
+    "foreground": "The material colors, Soft Blue, black, white and the two neutral grays",
+    "background": "Every Background value in the supplied table, including both edition-specific Gold values",
+    "excludedForeground": "Classic chromatic foregrounds and Minecoin Gold remain source references. Their shadows are available. Brightness exclusion is a design judgment, not a measured glare threshold.",
+    "usage": "Palette primitives are not semantic UI tokens. A source foreground and its shadow are not automatically an approved text/background combination."
+  },
+  "sourceConflicts": [
+    {
+      "code": "§q",
+      "name": "material_emerald",
+      "submittedForegroundRgb": [17, 160, 54],
+      "foregroundHex": "#47A036",
+      "resolvedForegroundRgb": [71, 160, 54],
+      "reason": "Retain the supplied Hex and the existing Builder Green artwork. Derive exported RGB from Hex."
+    },
+    {
+      "code": "§v",
+      "name": "material_resin",
+      "submittedForegroundRgb": [235, 114, 20],
+      "foregroundHex": "#EB7114",
+      "resolvedForegroundRgb": [235, 113, 20],
+      "reason": "Retain the supplied Hex and the existing Thinker Orange artwork. Derive exported RGB from Hex."
+    }
+  ],
+  "colors": [
+    {
+      "id": "scout-blue",
+      "name": "Scout Blue",
+      "group": "identity",
+      "code": "§t",
+      "sourceName": "material_lapis",
+      "foreground": "#21497B",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#08121E" }]
+    },
+    {
+      "id": "thinker-orange",
+      "name": "Thinker Orange",
+      "group": "identity",
+      "code": "§v",
+      "sourceName": "material_resin",
+      "foreground": "#EB7114",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#3B1D05" }]
+    },
+    {
+      "id": "builder-green",
+      "name": "Builder Green",
+      "group": "identity",
+      "code": "§q",
+      "sourceName": "material_emerald",
+      "foreground": "#47A036",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#04280D" }]
+    },
+    {
+      "id": "auditor-red",
+      "name": "Auditor Red",
+      "group": "identity",
+      "code": "§m",
+      "sourceName": "material_redstone",
+      "foreground": "#971607",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#250501" }]
+    },
+    {
+      "id": "core-graphite",
+      "name": "Core Graphite",
+      "group": "identity",
+      "code": "§j",
+      "sourceName": "material_netherite",
+      "foreground": "#443A3B",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#110E0E" }]
+    },
+    {
+      "id": "support-copper",
+      "name": "Support Copper",
+      "group": "support",
+      "code": "§n",
+      "sourceName": "material_copper",
+      "foreground": "#B4684D",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#2D1A13" }]
+    },
+    {
+      "id": "support-amber",
+      "name": "Support Amber",
+      "group": "support",
+      "code": "§p",
+      "sourceName": "material_gold",
+      "foreground": "#DEB12D",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#372C0B" }]
+    },
+    {
+      "id": "support-teal",
+      "name": "Support Teal",
+      "group": "support",
+      "code": "§s",
+      "sourceName": "material_diamond",
+      "foreground": "#2CBAA8",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#0B2E2A" }]
+    },
+    {
+      "id": "support-violet",
+      "name": "Support Violet",
+      "group": "support",
+      "code": "§u",
+      "sourceName": "material_amethyst",
+      "foreground": "#9A5CC6",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#261731" }]
+    },
+    {
+      "id": "soft-blue",
+      "name": "Soft Blue",
+      "group": "support",
+      "code": "§w",
+      "sourceName": "light_blue",
+      "foreground": "#8BB3FF",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#232D40" }]
+    },
+    {
+      "id": "quartz-surface",
+      "name": "Quartz Surface",
+      "group": "neutral",
+      "code": "§h",
+      "sourceName": "material_quartz",
+      "foreground": "#E3D4D1",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#383534" }]
+    },
+    {
+      "id": "iron-surface",
+      "name": "Iron Surface",
+      "group": "neutral",
+      "code": "§i",
+      "sourceName": "material_iron",
+      "foreground": "#CECACA",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#333232" }]
+    },
+    {
+      "id": "gray",
+      "name": "Gray",
+      "group": "neutral",
+      "code": "§7",
+      "sourceName": "gray",
+      "foreground": "#AAAAAA",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#2A2A2A" }]
+    },
+    {
+      "id": "dark-gray",
+      "name": "Dark Gray",
+      "group": "neutral",
+      "code": "§8",
+      "sourceName": "dark_gray",
+      "foreground": "#555555",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#151515" }]
+    },
+    {
+      "id": "black",
+      "name": "Black",
+      "group": "neutral",
+      "code": "§0",
+      "sourceName": "black",
+      "foreground": "#000000",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#000000" }]
+    },
+    {
+      "id": "white",
+      "name": "White",
+      "group": "neutral",
+      "code": "§f",
+      "sourceName": "white",
+      "foreground": "#FFFFFF",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#3F3F3F" }]
+    },
+    {
+      "id": "classic-dark-blue",
+      "name": "Dark Blue Shadow",
+      "group": "shadow",
+      "code": "§1",
+      "sourceName": "dark_blue",
+      "foreground": "#0000AA",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#00002A" }]
+    },
+    {
+      "id": "classic-dark-green",
+      "name": "Dark Green Shadow",
+      "group": "shadow",
+      "code": "§2",
+      "sourceName": "dark_green",
+      "foreground": "#00AA00",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#002A00" }]
+    },
+    {
+      "id": "classic-dark-aqua",
+      "name": "Dark Aqua Shadow",
+      "group": "shadow",
+      "code": "§3",
+      "sourceName": "dark_aqua",
+      "foreground": "#00AAAA",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#002A2A" }]
+    },
+    {
+      "id": "classic-dark-red",
+      "name": "Dark Red Shadow",
+      "group": "shadow",
+      "code": "§4",
+      "sourceName": "dark_red",
+      "foreground": "#AA0000",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#2A0000" }]
+    },
+    {
+      "id": "classic-dark-purple",
+      "name": "Dark Purple Shadow",
+      "group": "shadow",
+      "code": "§5",
+      "sourceName": "dark_purple",
+      "foreground": "#AA00AA",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#2A002A" }]
+    },
+    {
+      "id": "classic-gold",
+      "name": "Gold Shadow",
+      "group": "shadow",
+      "code": "§6",
+      "sourceName": "gold",
+      "foreground": "#FFAA00",
+      "backgrounds": [
+        { "edition": "java", "hex": "#2A2A00" },
+        { "edition": "bedrock", "hex": "#402A00" }
+      ]
+    },
+    {
+      "id": "classic-blue",
+      "name": "Blue Shadow",
+      "group": "shadow",
+      "code": "§9",
+      "sourceName": "blue",
+      "foreground": "#5555FF",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#15153F" }]
+    },
+    {
+      "id": "classic-green",
+      "name": "Green Shadow",
+      "group": "shadow",
+      "code": "§a",
+      "sourceName": "green",
+      "foreground": "#55FF55",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#153F15" }]
+    },
+    {
+      "id": "classic-aqua",
+      "name": "Aqua Shadow",
+      "group": "shadow",
+      "code": "§b",
+      "sourceName": "aqua",
+      "foreground": "#55FFFF",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#153F3F" }]
+    },
+    {
+      "id": "classic-red",
+      "name": "Red Shadow",
+      "group": "shadow",
+      "code": "§c",
+      "sourceName": "red",
+      "foreground": "#FF5555",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#3F1515" }]
+    },
+    {
+      "id": "classic-light-purple",
+      "name": "Light Purple Shadow",
+      "group": "shadow",
+      "code": "§d",
+      "sourceName": "light_purple",
+      "foreground": "#FF55FF",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#3F153F" }]
+    },
+    {
+      "id": "classic-yellow",
+      "name": "Yellow Shadow",
+      "group": "shadow",
+      "code": "§e",
+      "sourceName": "yellow",
+      "foreground": "#FFFF55",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#3F3F15" }]
+    },
+    {
+      "id": "minecoin-gold",
+      "name": "Minecoin Gold Shadow",
+      "group": "shadow",
+      "code": "§g",
+      "sourceName": "minecoin_gold",
+      "foreground": "#DDD605",
+      "backgrounds": [{ "edition": "unsplit", "hex": "#373501" }]
+    }
+  ]
+}

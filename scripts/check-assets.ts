@@ -226,18 +226,22 @@ export async function verifyAssets(
       `Unexpected asset rights: ${relative}`,
     );
     const kind =
-      format === "ttf"
-        ? "font"
-        : format === "txt"
-          ? "font-license"
-          : format === "png" || format === "svg"
-            ? "logo-export"
-            : relative.includes("/Source Canvases/")
-              ? "archived-study"
-              : "logo-source";
+      relative === "assets/palette.json"
+        ? "palette-source"
+        : relative === "assets/palette.svg"
+          ? "palette-export"
+          : format === "ttf"
+            ? "font"
+            : format === "txt"
+              ? "font-license"
+              : format === "png" || format === "svg"
+                ? "logo-export"
+                : relative.includes("/Source Canvases/")
+                  ? "archived-study"
+                  : "logo-source";
     assert.equal(entry["kind"], kind, `Asset kind differs: ${relative}`);
     assert(
-      ["png", "svg", "ttf", "txt", "af", "aseprite"].includes(format),
+      ["png", "svg", "ttf", "txt", "af", "aseprite", "json"].includes(format),
       `Unsupported asset format: ${format}`,
     );
     if (format === "png") {
@@ -285,6 +289,9 @@ export async function verifyAssets(
         ),
         `Active or external SVG content: ${relative}`,
       );
+    } else if (format === "json") {
+      assert.equal(relative, "assets/palette.json", "Unexpected JSON asset");
+      assert.equal(record(parseJson(bytes))["format"], 1);
     } else if (format === "ttf") {
       assert.deepEqual(
         entry["font"],
@@ -379,6 +386,13 @@ export async function verifyAssets(
       `Corrected copy dimensions differ: ${relative}`,
     );
   }
+  const paletteExport = assets.get("assets/palette.svg");
+  assert(paletteExport, "Missing palette export");
+  assert.deepEqual(
+    paletteExport["generatedFrom"],
+    { data: "assets/palette.json", renderer: "scripts/palette.ts" },
+    "Palette export source differs",
+  );
   for (const [relative, entry] of assets) {
     if (entry["derivedFrom"] !== undefined) {
       const source = text(entry["derivedFrom"]);

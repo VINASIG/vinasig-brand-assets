@@ -2,9 +2,9 @@
   "format": 1,
   "repository": "VINASIG/vinasig-brand-assets",
   "archiveVersion": "1.0",
-  "reviewedOn": "2026-10-03",
+  "reviewedOn": "2026-10-08",
   "preservationCommit": "8c778ef3b5dd662fcdfdcde0f80f6a6da27d4a6e",
-  "assetCount": 50,
+  "assetCount": 52,
   "preservedRecords": {
     "99_Evidence/CREATION_RECORD.md": "ebe1f5c7192aa8dc4c2c5d3d006d6e15f20d0eeb7ab3a4953ee82bbe5729a672",
     "99_Evidence/FILE_INVENTORY.md": "839a9821ddb83cd27029c79b285b661cde2bce6c871fd9a4379d2546a5ebf6e9",
@@ -634,6 +634,29 @@
         "alphaChannel": false
       },
       "derivedFrom": "01_Logos/Contained Mark/Exports/VINASIG Contained Brand Mark - 4x - 108x108.png"
+    },
+    {
+      "id": "assets-palette-json",
+      "path": "assets/palette.json",
+      "kind": "palette-source",
+      "format": "json",
+      "bytes": 9256,
+      "sha256": "069b4b4bfb3c7cc131026f1cc122596ca47dbe4536cc99428f91968512d10002",
+      "rights": "VINASIG-reserved"
+    },
+    {
+      "id": "assets-palette-svg",
+      "path": "assets/palette.svg",
+      "kind": "palette-export",
+      "format": "svg",
+      "bytes": 13434,
+      "sha256": "20faf597dcb951898e4faeb0e8f53b412392ffcb884f5f38bb83342f6a8b4744",
+      "rights": "VINASIG-reserved",
+      "viewBox": [0, 0, 1120, 1376],
+      "generatedFrom": {
+        "data": "assets/palette.json",
+        "renderer": "scripts/palette.ts"
+      }
     }
   ]
 }

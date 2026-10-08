@@ -1,6 +1,6 @@
 # VINASIG Brand Assets
 
-The public reference archive for the VINASIG Logo System 1.0, Space Grotesk typography and the accompanying creation records. VINASIG describes its agents as SI agents, using Super Intelligence as its naming convention.
+The public reference archive for the VINASIG Logo System 1.0, its color palette, Space Grotesk typography and the accompanying creation records. VINASIG describes its agents as SI agents, using Super Intelligence as its naming convention.
 
 <img src="01_Logos/Contained%20Mark/Exports/VINASIG%20Contained%20Brand%20Mark%20-%2040x%20-%201080x1080.png" alt="VINASIG contained mark" width="160" height="160">
 
@@ -16,7 +16,15 @@ The public reference archive for the VINASIG Logo System 1.0, Space Grotesk typo
 | Browser favicon       | [16 px](<01_Logos/Favicon/Exports/VINASIG Favicon - 16x16.png>), [32 px](<01_Logos/Favicon/Exports/VINASIG Favicon - 32x32.png>), [48 px](<01_Logos/Favicon/Exports/VINASIG Favicon - 48x48.png>) | Existing PNG exports. The 16 px image is opaque; 32 and 48 px include an alpha channel.                                      |
 | Typography            | [Space Grotesk variable TTF](<02_Typography/Space Grotesk/fonts/variable/SpaceGrotesk-VariableFont_wght.ttf>)                                                                                     | Weight axis 300 through 700. Five static weights are also included. Retain [OFL.txt](<02_Typography/Space Grotesk/OFL.txt>). |
 
-See [asset selection and integration](docs/assets.md) for monochrome variants, dimensions, colors and typography. [asset-catalog.json](asset-catalog.json) inventories all 50 asset files with their actual metadata and SHA-256 digests. It includes 48 original files and two corrected filename copies.
+See [asset selection and integration](docs/assets.md) for monochrome variants, dimensions, colors and typography. [asset-catalog.json](asset-catalog.json) inventories all 52 asset files with their actual metadata and SHA-256 digests. It includes 48 original files, two corrected filename copies and the current palette JSON and SVG.
+
+## Color palette
+
+![VINASIG Foreground and Background palette](assets/palette.svg)
+
+The [current color guide](docs/colors.md) includes the five preserved identity colors, supporting colors, lighter neutrals and the Minecraft table's Background shadow values. There are 16 selected Foreground values, 30 Background values and 45 distinct selected colors. Highly saturated classic Foreground colors and Minecoin Gold remain source references rather than selected accents.
+
+Use [palette.json](assets/palette.json) for exact values and source decisions, or the [Hex and RGB reference](docs/palette-reference.md) for copyable tables. A source Foreground/Background pair is not automatically an accessible text pair. The guide records failed pairs and the two RGB/Hex conflicts in the supplied source.
 
 ## Rights and notices
 
@@ -28,7 +36,7 @@ The [asset rights notice](ASSET_RIGHTS.md) and [VINASIG Brand Usage Policy](BRAN
 | ------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
 | [01_Logos](01_Logos)                                         | Original exports, editable sources and historical source canvases.                        |
 | [02_Typography/Space Grotesk](<02_Typography/Space Grotesk>) | Original variable and static TTF fonts with their font notice.                            |
-| [assets](assets)                                             | Two contained-mark copies with corrected dimension names.                                 |
+| [assets](assets)                                             | Two corrected contained-mark copies and the current palette source and SVG.               |
 | [99_Evidence](99_Evidence)                                   | Original creation record, inventory, checksum baseline and the documented story revision. |
 | [VINASIG_Logo_Story.md](VINASIG_Logo_Story.md)               | Preserved design rationale and identity palette.                                          |
 | [AGENTS.md](AGENTS.md)                                       | Asset preservation rules and the pinned VINASIG SI agent standards entrypoint.            |

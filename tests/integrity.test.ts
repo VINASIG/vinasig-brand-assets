@@ -74,11 +74,11 @@ async function alterCatalog(
 
 await test("the current archive and core snapshot pass their integrity gates", async () => {
   const assets = await verifyAssets();
-  assert.equal(assets.assets, 50);
+  assert.equal(assets.assets, 52);
   assert.equal(assets.originalAssets, 48);
   assert.equal(assets.historicalEntries, 49);
   assert.equal(assets.correctedCopies, 2);
-  assert.equal(assets.checksums.length, 51);
+  assert.equal(assets.checksums.length, 53);
   assert(
     assets.checksums.every(
       (line) => !line.includes(".git/") && !line.includes("output/"),
@@ -206,6 +206,24 @@ await test("a corrected copy must identify its exact archival source", async () 
   await assert.rejects(verifyAssets(root), /Corrected copy source differs/);
 });
 
+await test("changed palette data is rejected by its reviewed catalog digest", async () => {
+  const root = await fixture();
+  await appendFile(path.join(root, "assets/palette.json"), "\n");
+  await assert.rejects(verifyAssets(root), /Asset size changed/);
+});
+
+await test("the palette export must identify its data and renderer", async () => {
+  const root = await fixture();
+  await alterCatalog(root, (_catalog, assets) => {
+    const palette = assets.find(
+      (entry) => entry["path"] === "assets/palette.svg",
+    );
+    assert(palette);
+    palette["generatedFrom"] = { data: "unreviewed.json" };
+  });
+  await assert.rejects(verifyAssets(root), /Palette export source differs/);
+});
+
 await test("managed policy tampering is rejected", async () => {
   const root = await fixture();
   await appendFile(
@@ -262,6 +280,9 @@ await test("publication documentation links resolve inside the checkout", async 
     "CONTRIBUTING.md",
     "SECURITY.md",
     "docs/assets.md",
+    "docs/colors.md",
+    "docs/palette-reference.md",
+    "docs/audits/palette-2026-10-08.md",
     "docs/standards.md",
     "docs/toolchain.md",
     "docs/audits/publication-2026-10-03.md",
